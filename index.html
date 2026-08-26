@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studify - Organización del estudio</title>
+</head>
+<body>
+  <header>
+    <h1>Studify</h1>
+    <p>Tu estudio, mejor organizado.</p>
+
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#plan">Plan de hoy</a></li>
+        <li><a href="#apuntes">Mis apuntes</a></li>
+        <li><a href="#estadisticas">Estadísticas</a></li>
+        <li><a href="#pomodoro">Pomodoro</a></li>
+        <li><a href="#tecnicas">Técnicas de estudio</a></li>
+        <li><a href="#asistente">Asistente IA</a></li>
+        <li><a href="#examenes">Exámenes</a></li>
+        <li><a href="#perfil">Perfil</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="acceso">
+      <h2>Acceso</h2>
+      <p>Inicia sesión para organizar tu estudio.</p>
+
+      <form action="#inicio" method="get">
+        <fieldset>
+          <legend>Iniciar sesión</legend>
+
+          <label for="login-email">Correo electrónico</label>
+          <input id="login-email" name="email" type="email" required>
+
+          <label for="login-password">Contraseña</label>
+          <input id="login-password" name="password" type="password" required>
+
+          <button type="submit">Ingresar</button>
+        </fieldset>
+      </form>
+
+      <details>
+        <summary>Crear una cuenta</summary>
+        <form action="#inicio" method="get">
+          <label for="register-name">Nombre</label>
+          <input id="register-name" name="name" type="text" required>
+
+          <label for="register-email">Correo electrónico</label>
+          <input id="register-email" name="email" type="email" required>
+
+          <label for="register-password">Contraseña</label>
+          <input id="register-password" name="password" type="password" required>
+
+          <button type="submit">Registrarme</button>
+        </form>
+      </details>
+    </section>
+
+    <hr>
+
+    <section id="inicio">
+      <header>
+        <h2>Inicio</h2>
+        <p>La disciplina de hoy es el éxito de mañana.</p>
+      </header>
+
+      <section aria-labelledby="resumen-title">
+        <h3 id="resumen-title">Resumen de estudio</h3>
+        <dl>
+          <dt>Horas estudiadas esta semana</dt>
+          <dd>3 horas</dd>
+          <dt>Racha actual</dt>
+          <dd>3 días</dd>
+          <dt>Sesiones completadas</dt>
+          <dd>3</dd>
+          <dt>Apuntes guardados</dt>
+          <dd>3</dd>
+        </dl>
+      </section>
+
+      <section aria-labelledby="actividad-title">
+        <h3 id="actividad-title">Actividad semanal</h3>
+        <table>
+          <caption>Minutos estudiados por día</caption>
+          <thead>
+            <tr>
+              <th>Día</th>
+              <th>Minutos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Lunes</td><td>0</td></tr>
+            <tr><td>Martes</td><td>0</td></tr>
+            <tr><td>Miércoles</td><td>0</td></tr>
+            <tr><td>Jueves</td><td>0</td></tr>
+            <tr><td>Viernes</td><td>50</td></tr>
+            <tr><td>Sábado</td><td>110</td></tr>
+            <tr><td>Domingo</td><td>0</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </section>
+
+    <hr>
+
+    <section id="plan">
+      <header>
+        <h2>Plan de hoy</h2>
+        <p>Una guía concreta para avanzar sin perder el foco.</p>
+      </header>
+
+      <article>
+        <h3>Parcial de Biología Celular</h3>
+        <p><strong>Prioridad:</strong> estudiar el primer tema pendiente.</p>
+        <p><strong>Tarea:</strong> estudiar Organelos y cerrar con 10 minutos de repaso activo.</p>
+        <p><strong>Técnica recomendada:</strong> Pomodoro.</p>
+        <p><strong>Tiempo estimado:</strong> 1 hora.</p>
+        <a href="#pomodoro">Comenzar sesión</a>
+      </article>
+
+      <aside>
+        <h3>Cómo se calcula</h3>
+        <ul>
+          <li>Se toma el examen más cercano con temas pendientes.</li>
+          <li>Se reparten las horas restantes entre los días disponibles.</li>
+          <li>La técnica cambia según la cercanía y la cantidad de temas pendientes.</li>
+        </ul>
+      </aside>
+    </section>
+
+    <hr>
+
+    <section id="apuntes">
+      <header>
+        <h2>Mis apuntes</h2>
+        <p>Carga materiales y organízalos por materia.</p>
+      </header>
+
+      <form>
+        <label for="filtro-materia">Filtrar por materia</label>
+        <select id="filtro-materia" name="materia">
+          <option>Todos</option>
+          <option>Biología</option>
+          <option>Matemática</option>
+          <option>Historia</option>
+          <option>Química</option>
+        </select>
+      </form>
+
+      <section aria-labelledby="lista-apuntes-title">
+        <h3 id="lista-apuntes-title">Apuntes guardados</h3>
+        <article>
+          <h4>Fisiología Humana - Unidad 2</h4>
+          <p>Biología · PDF · 2.4 MB</p>
+          <button type="button">Abrir</button>
+          <button type="button">Editar</button>
+          <button type="button">Eliminar</button>
+        </article>
+        <article>
+          <h4>Cálculo Integral - Resumen</h4>
+          <p>Matemática · PDF · 1.8 MB</p>
+          <button type="button">Abrir</button>
+          <button type="button">Editar</button>
+          <button type="button">Eliminar</button>
+        </article>
+        <article>
+          <h4>Historia Argentina - Siglo XIX</h4>
+          <p>Historia · PDF · 3.1 MB</p>
+          <button type="button">Abrir</button>
+          <button type="button">Editar</button>
+          <button type="button">Eliminar</button>
+        </article>
+      </section>
+
+      <form enctype="multipart/form-data">
+        <fieldset>
+          <legend>Nuevo apunte</legend>
+
+          <label for="apunte-titulo">Título</label>
+          <input id="apunte-titulo" name="titulo" type="text" required>
+
+          <label for="apunte-materia">Materia</label>
+          <select id="apunte-materia" name="materia" required>
+            <option>Biología</option>
+            <option>Matemática</option>
+            <option>Historia</option>
+            <option>Química</option>
+          </select>
+
+          <label for="apunte-archivo">Archivo PDF o DOCX</label>
+          <input id="apunte-archivo" name="archivo" type="file" accept=".pdf,.doc,.docx">
+
+          <button type="submit">Guardar apunte</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <hr>
+
+    <section id="estadisticas">
+      <header>
+        <h2>Estadísticas</h2>
+        <p>Mira cómo avanza tu estudio esta semana.</p>
+      </header>
+
+      <p><strong>Total semanal:</strong> 3 horas</p>
+      <table>
+        <caption>Tiempo por materia</caption>
+        <thead>
+          <tr>
+            <th>Materia</th>
+            <th>Tiempo estudiado</th>
+            <th>Objetivo semanal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Biología</td><td>50 minutos</td><td>8 horas</td></tr>
+          <tr><td>Matemática</td><td>75 minutos</td><td>7 horas</td></tr>
+          <tr><td>Historia</td><td>35 minutos</td><td>5 horas</td></tr>
+          <tr><td>Química</td><td>0 minutos</td><td>6 horas</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr>
+
+    <section id="pomodoro">
+      <header>
+        <h2>Pomodoro</h2>
+        <p>Enfócate por bloques y registra tus sesiones.</p>
+      </header>
+
+      <section aria-labelledby="temporizador-title">
+        <h3 id="temporizador-title">Temporizador de estudio</h3>
+        <p><time datetime="PT25M">25:00 minutos</time></p>
+
+        <label for="pomodoro-materia">Materia</label>
+        <select id="pomodoro-materia" name="materia">
+          <option>Biología</option>
+          <option>Matemática</option>
+          <option>Historia</option>
+          <option>Química</option>
+        </select>
+
+        <button type="button">Iniciar</button>
+        <button type="button">Pausar</button>
+        <button type="button">Reiniciar</button>
+      </section>
+
+      <form>
+        <fieldset>
+          <legend>Registrar sesión manual</legend>
+
+          <label for="sesion-materia">Materia</label>
+          <select id="sesion-materia" name="materia">
+            <option>Biología</option>
+            <option>Matemática</option>
+            <option>Historia</option>
+            <option>Química</option>
+          </select>
+
+          <label for="sesion-minutos">Minutos</label>
+          <input id="sesion-minutos" name="minutos" type="number" min="1" value="25">
+
+          <label for="sesion-fecha">Fecha</label>
+          <input id="sesion-fecha" name="fecha" type="date">
+
+          <button type="submit">Guardar sesión</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <hr>
+
+    <section id="tecnicas">
+      <header>
+        <h2>Técnicas de estudio</h2>
+        <p>Elige el método adecuado para cada objetivo.</p>
+      </header>
+
+      <article>
+        <h3>Pomodoro</h3>
+        <p>25 minutos de enfoque y 5 minutos de descanso.</p>
+        <ol>
+          <li>Elegir una tarea concreta.</li>
+          <li>Estudiar 25 minutos sin interrupciones.</li>
+          <li>Descansar 5 minutos.</li>
+          <li>Registrar la sesión al terminar.</li>
+        </ol>
+      </article>
+
+      <article>
+        <h3>Técnica Feynman</h3>
+        <p>Explica un tema con palabras simples para descubrir dudas.</p>
+        <ol>
+          <li>Elegir un concepto.</li>
+          <li>Explicarlo como si fuera para otra persona.</li>
+          <li>Detectar las partes confusas.</li>
+          <li>Volver al apunte y mejorar la explicación.</li>
+        </ol>
+      </article>
+
+      <article>
+        <h3>Mapas mentales</h3>
+        <p>Conecta conceptos visualmente para recordar relaciones importantes.</p>
+      </article>
+
+      <article>
+        <h3>Active recall</h3>
+        <p>Practica recordar la información sin mirar tus apuntes.</p>
+      </article>
+    </section>
+
+    <hr>
+
+    <section id="asistente">
+      <header>
+        <h2>Asistente IA</h2>
+        <p>Resume, explica y practica con tus apuntes.</p>
+      </header>
+
+      <form>
+        <label for="asistente-apunte">Seleccionar apunte</label>
+        <select id="asistente-apunte" name="apunte">
+          <option>Fisiología Humana - Unidad 2</option>
+          <option>Cálculo Integral - Resumen</option>
+          <option>Historia Argentina - Siglo XIX</option>
+        </select>
+
+        <fieldset>
+          <legend>Tipo de ayuda</legend>
+          <label><input name="modo" type="radio" value="resumen" checked> Resumir</label>
+          <label><input name="modo" type="radio" value="explicacion"> Explicar</label>
+          <label><input name="modo" type="radio" value="preguntas"> Generar preguntas</label>
+        </fieldset>
+
+        <label for="asistente-consulta">Consulta</label>
+        <textarea id="asistente-consulta" name="consulta" rows="5" placeholder="Escribe tu pregunta"></textarea>
+
+        <button type="submit">Enviar consulta</button>
+      </form>
+
+      <section aria-labelledby="historial-ia-title">
+        <h3 id="historial-ia-title">Historial de respuestas</h3>
+        <p>Todavía no hay respuestas guardadas.</p>
+      </section>
+    </section>
+
+    <hr>
+
+    <section id="examenes">
+      <header>
+        <h2>Exámenes y calendario</h2>
+        <p>Planifica sesiones según lo que falta estudiar.</p>
+      </header>
+
+      <section aria-labelledby="lista-examenes-title">
+        <h3 id="lista-examenes-title">Próximos exámenes</h3>
+        <article>
+          <h4>Parcial de Biología Celular</h4>
+          <p>Materia: Biología</p>
+          <p>Fecha: <time datetime="2026-07-08">8 de julio de 2026</time></p>
+          <p>Progreso: 1 de 3 temas completados.</p>
+          <ul>
+            <li><label><input type="checkbox" checked> Membrana celular</label></li>
+            <li><label><input type="checkbox"> Organelos</label></li>
+            <li><label><input type="checkbox"> Transporte celular</label></li>
+          </ul>
+        </article>
+
+        <article>
+          <h4>Integrales y aplicaciones</h4>
+          <p>Materia: Matemática</p>
+          <p>Fecha: <time datetime="2026-07-15">15 de julio de 2026</time></p>
+          <p>Progreso: 0 de 3 temas completados.</p>
+        </article>
+      </section>
+
+      <form>
+        <fieldset>
+          <legend>Nuevo examen</legend>
+
+          <label for="examen-nombre">Nombre del examen</label>
+          <input id="examen-nombre" name="nombre" type="text" required>
+
+          <label for="examen-materia">Materia</label>
+          <select id="examen-materia" name="materia">
+            <option>Biología</option>
+            <option>Matemática</option>
+            <option>Historia</option>
+            <option>Química</option>
+          </select>
+
+          <label for="examen-fecha">Fecha</label>
+          <input id="examen-fecha" name="fecha" type="date" required>
+
+          <label for="examen-horas">Horas estimadas</label>
+          <input id="examen-horas" name="horas" type="number" min="1">
+
+          <label for="examen-temas">Temas separados por coma</label>
+          <textarea id="examen-temas" name="temas" rows="4" required></textarea>
+
+          <button type="submit">Guardar examen</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <hr>
+
+    <section id="perfil">
+      <header>
+        <h2>Perfil</h2>
+        <p>Tus materias, actividad y logros de estudio.</p>
+      </header>
+
+      <section aria-labelledby="datos-usuario-title">
+        <h3 id="datos-usuario-title">Datos del usuario</h3>
+        <p><strong>Nombre:</strong> Usuario</p>
+        <p><strong>Correo:</strong> estudiante@mail.com</p>
+        <button type="button">Cerrar sesión</button>
+      </section>
+
+      <section aria-labelledby="materias-title">
+        <h3 id="materias-title">Materias</h3>
+        <ul>
+          <li>Biología — objetivo: 8 horas semanales</li>
+          <li>Matemática — objetivo: 7 horas semanales</li>
+          <li>Historia — objetivo: 5 horas semanales</li>
+          <li>Química — objetivo: 6 horas semanales</li>
+        </ul>
+      </section>
+
+      <form>
+        <fieldset>
+          <legend>Nueva materia</legend>
+
+          <label for="materia-nombre">Nombre</label>
+          <input id="materia-nombre" name="nombre" type="text" required>
+
+          <label for="materia-objetivo">Horas objetivo por semana</label>
+          <input id="materia-objetivo" name="objetivo" type="number" min="1" required>
+
+          <button type="submit">Guardar materia</button>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Studify — Plataforma de organización para estudiantes.</p>
+    <a href="#inicio">Volver al inicio</a>
+  </footer>
+</body>
+</html>
