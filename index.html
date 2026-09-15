@@ -2,15 +2,38 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Studify - Organización del estudio</title>
+
+  <title>Studify | Organización y técnicas de estudio</title>
+
+  <meta
+    name="description"
+    content="Studify es una plataforma para organizar el estudio, planificar exámenes, utilizar la técnica Pomodoro y mejorar tus hábitos de aprendizaje."
+  >
+
+  <meta
+    name="keywords"
+    content="estudio, organización, estudiantes, pomodoro, técnicas de estudio, apuntes, exámenes"
+  >
+
+  <meta name="author" content="Equipo Studify">
+
+  <meta name="robots" content="index, follow">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Studify</h1>
-    <p>Tu estudio, mejor organizado.</p>
+<header>
+  <div class="marca">
+    <img src="img/logo-studify.png" alt="Logo de Studify">
+    <div>
+      <h1>Studify</h1>
+      <p>Tu estudio, mejor organizado.</p>
+    </div>
+  </div>
 
-    <nav aria-label="Navegación principal">
+  <nav aria-label="Navegación principal">
       <ul>
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#plan">Plan de hoy</a></li>
@@ -71,16 +94,27 @@
 
       <section aria-labelledby="resumen-title">
         <h3 id="resumen-title">Resumen de estudio</h3>
-        <dl>
-          <dt>Horas estudiadas esta semana</dt>
-          <dd>3 horas</dd>
-          <dt>Racha actual</dt>
-          <dd>3 días</dd>
-          <dt>Sesiones completadas</dt>
-          <dd>3</dd>
-          <dt>Apuntes guardados</dt>
-          <dd>3</dd>
-        </dl>
+<dl class="resumen-grid">
+  <div class="resumen-card">
+    <dt>Horas estudiadas esta semana</dt>
+    <dd>3 horas</dd>
+  </div>
+
+  <div class="resumen-card">
+    <dt>Racha actual</dt>
+    <dd>3 días</dd>
+  </div>
+
+  <div class="resumen-card">
+    <dt>Sesiones completadas</dt>
+    <dd>3</dd>
+  </div>
+
+  <div class="resumen-card">
+    <dt>Apuntes guardados</dt>
+    <dd>3</dd>
+  </div>
+</dl>
       </section>
 
       <section aria-labelledby="actividad-title">
