@@ -22,3 +22,44 @@ body {
     background-color: var(--color-fondo);
     color: var(--color-texto);
 }
+
+body > header {
+    background-color: var(--color-blanco);
+    padding: 1.5rem 5%;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: var(--sombra);
+}
+
+body > header h1 {
+    margin: 0;
+    color: var(--color-primario);
+    font-size: 2rem;
+}
+
+body > header p {
+    margin: 0.5rem 0 1rem;
+    color: var(--color-texto-suave);
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    padding: 0.7rem 1rem;
+    color: var(--color-texto);
+    text-decoration: none;
+    border-radius: var(--radio-borde);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+}
