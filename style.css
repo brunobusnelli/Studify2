@@ -120,7 +120,7 @@ hr {
 
 
 
-.resumen-grid {
+/* .resumen-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
@@ -144,7 +144,7 @@ hr {
     color: var(--color-primario);
     font-size: 1.5rem;
     font-weight: bold;
-}
+} */
 
 
 
@@ -265,9 +265,9 @@ aside h3 {
         width: 94%;
     }
 
-    .resumen-grid {
+    /* .resumen-grid {
         grid-template-columns: repeat(2, 1fr);
-    }
+    } */
 
     nav ul {
         justify-content: center;
@@ -307,9 +307,9 @@ aside h3 {
         padding: 1rem;
     }
 
-    .resumen-grid {
+    /* .resumen-grid {
         grid-template-columns: 1fr;
-    }
+    } */
 
     table {
         font-size: 0.9rem;
