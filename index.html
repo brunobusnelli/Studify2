@@ -108,40 +108,114 @@
 </header>
 
   <main>
-    <section id="acceso">
-      <h2>Acceso</h2>
-      <p>Inicia sesión para organizar tu estudio.</p>
+<section id="acceso" class="card border-0 shadow-sm mb-4">
+  <div class="card-body p-4">
+  <div class="row">
+    <div class="col-12 col-lg-8">
+    <div class="mb-4">
+      <h2 class="card-title mb-2">Acceso</h2>
+      <p class="text-secondary mb-0">
+        Inicia sesión para organizar tu estudio.
+      </p>
+    </div>
 
-      <form action="#inicio" method="get">
-        <fieldset>
-          <legend>Iniciar sesión</legend>
+    <form action="#inicio" method="get">
+      <h3 class="h5 text-primary mb-3">Iniciar sesión</h3>
 
-          <label for="login-email">Correo electrónico</label>
-          <input id="login-email" name="email" type="email" required>
+      <div class="mb-3">
+        <label for="login-email" class="form-label">
+          Correo electrónico
+        </label>
 
-          <label for="login-password">Contraseña</label>
-          <input id="login-password" name="password" type="password" required>
+        <input
+          id="login-email"
+          name="email"
+          type="email"
+          class="form-control"
+          placeholder="nombre@ejemplo.com"
+          required
+        >
+      </div>
 
-          <button type="submit">Ingresar</button>
-        </fieldset>
+      <div class="mb-3">
+        <label for="login-password" class="form-label">
+          Contraseña
+        </label>
+
+        <input
+          id="login-password"
+          name="password"
+          type="password"
+          class="form-control"
+          placeholder="Ingresá tu contraseña"
+          required
+        >
+      </div>
+
+      <button type="submit" class="btn btn-primary px-4">
+        Ingresar
+      </button>
+    </form>
+
+    <details class="mt-3">
+      <summary class="fw-semibold">
+        Crear una cuenta
+      </summary>
+
+      <form action="#inicio" method="get" class="mt-3">
+
+        <div class="mb-3">
+          <label for="register-name" class="form-label">
+            Nombre
+          </label>
+
+          <input
+            id="register-name"
+            name="name"
+            type="text"
+            class="form-control"
+            required
+          >
+        </div>
+
+        <div class="mb-3">
+          <label for="register-email" class="form-label">
+            Correo electrónico
+          </label>
+
+          <input
+            id="register-email"
+            name="email"
+            type="email"
+            class="form-control"
+            required
+          >
+        </div>
+
+        <div class="mb-3">
+          <label for="register-password" class="form-label">
+            Contraseña
+          </label>
+
+          <input
+            id="register-password"
+            name="password"
+            type="password"
+            class="form-control"
+            required
+          >
+        </div>
+
+        <button type="submit" class="btn btn-outline-primary">
+          Registrarme
+        </button>
+
       </form>
-
-      <details>
-        <summary>Crear una cuenta</summary>
-        <form action="#inicio" method="get">
-          <label for="register-name">Nombre</label>
-          <input id="register-name" name="name" type="text" required>
-
-          <label for="register-email">Correo electrónico</label>
-          <input id="register-email" name="email" type="email" required>
-
-          <label for="register-password">Contraseña</label>
-          <input id="register-password" name="password" type="password" required>
-
-          <button type="submit">Registrarme</button>
-        </form>
-      </details>
-    </section>
+    </details>
+    </div>
+  </div>
+</div>
+</section>
 
     <hr>
 
