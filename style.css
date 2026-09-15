@@ -63,3 +63,56 @@ nav a:hover {
     background-color: var(--color-primario);
     color: var(--color-blanco);
 }
+
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+main > section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: var(--color-blanco);
+    border: 1px solid #e5e7eb;
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra);
+}
+
+main > section > header h2 {
+    margin-top: 0;
+    color: var(--color-primario);
+}
+
+hr {
+    display: none;
+}
+
+
+
+.resumen-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.resumen-card {
+    padding: 1.2rem;
+    background-color: var(--color-fondo);
+    border: 1px solid #e5e7eb;
+    border-radius: var(--radio-borde);
+}
+
+.resumen-card dt {
+    color: var(--color-texto-suave);
+    font-size: 0.9rem;
+}
+
+.resumen-card dd {
+    margin: 0.5rem 0 0;
+    color: var(--color-primario);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
