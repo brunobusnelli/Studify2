@@ -89,6 +89,11 @@ nav a:hover {
 }
 */
 
+.navbar-toggler {
+    width: auto;
+    margin-bottom: 0;
+}
+
 main {
     width: 90%;
     max-width: 1200px;
