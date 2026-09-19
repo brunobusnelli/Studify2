@@ -26,7 +26,13 @@
   integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
   crossorigin="anonymous"
 >
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap"
+  rel="stylesheet"
+>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -102,32 +108,176 @@
           </li>
         </ul>
       </div>
+<div class="sidebar-footer-card">
 
+  <div class="sidebar-footer-avatar">
+    B
+  </div>
+
+  <div class="sidebar-footer-info">
+    <strong>Bruno</strong>
+    <span>Enfoque activo</span>
+  </div>
+
+</div>
     </div>
   </nav>
 </header>
 
   <main>
-<section id="acceso" class="dashboard-bienvenida">
+<section id="acceso" class="studify-hero">
 
-  <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+  <div class="row align-items-center g-5">
 
-    <div>
-      <span class="dashboard-etiqueta">
-        PANEL DE ESTUDIO
+    <!-- TEXTO PRINCIPAL -->
+    <div class="col-12 col-lg-7">
+
+      <span class="hero-chip">
+        TU ESPACIO DE ESTUDIO
       </span>
 
-      <h1 class="dashboard-titulo">
-        Hola, Bruno!
+      <h1 class="hero-title">
+        Estudiá con un plan.
+        <span>Avanzá con foco.</span>
       </h1>
 
-      <p class="dashboard-subtitulo">
-        La disciplina de hoy es el éxito de mañana.
+      <p class="hero-description">
+        Organizá tus materias, registrá tus sesiones y usá técnicas
+        de estudio desde un solo lugar.
       </p>
+
+      <div class="hero-actions">
+
+        <a
+          href="#pomodoro"
+          class="btn hero-btn-primary"
+        >
+          Comenzar a estudiar
+        </a>
+
+        <a
+          href="#apuntes"
+          class="btn hero-btn-secondary"
+        >
+          Ver mis apuntes
+        </a>
+
+      </div>
+
+
+      <div class="hero-info">
+
+        <div>
+          <strong>3 h</strong>
+          <span>esta semana</span>
+        </div>
+
+        <div>
+          <strong>3</strong>
+          <span>sesiones</span>
+        </div>
+
+        <div>
+          <strong>3 días</strong>
+          <span>de racha</span>
+        </div>
+
+      </div>
+
     </div>
 
+
+    <!-- MOCKUP VISUAL -->
+    <div class="col-12 col-lg-5">
+
+      <div class="hero-visual">
+
+        <div class="hero-visual-header">
+
+          <div>
+            <span class="hero-visual-label">
+              HOY
+            </span>
+
+            <h2>
+              Tu progreso
+            </h2>
+          </div>
+
+          <span class="hero-status">
+            En curso
+          </span>
+
+        </div>
+
+
+        <div class="hero-progress">
+
+          <div class="hero-progress-circle">
+            <strong>63%</strong>
+            <span>completado</span>
+          </div>
+
+        </div>
+
+
+        <div class="hero-task">
+
+          <div class="hero-task-icon">
+            01
+          </div>
+
+          <div>
+            <strong>
+              Biología Celular
+            </strong>
+
+            <span>
+              Organelos · 25 min
+            </span>
+          </div>
+
+        </div>
+
+
+        <div class="hero-task">
+
+          <div class="hero-task-icon">
+            02
+          </div>
+
+          <div>
+            <strong>
+              Repaso activo
+            </strong>
+
+            <span>
+              10 minutos
+            </span>
+          </div>
+
+        </div>
+
+
+        <a
+          href="#pomodoro"
+          class="hero-session-link"
+        >
+          Iniciar próxima sesión →
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- CUENTA -->
+  <div class="hero-account">
+
     <button
-      class="btn btn-outline-primary"
+      class="btn btn-sm btn-outline-primary"
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#panel-acceso"
@@ -200,7 +350,7 @@
         <div class="acceso-panel">
 
           <h2 class="h5 mb-3">
-            Crear una cuenta
+            Crear cuenta
           </h2>
 
           <form action="#inicio" method="get">
@@ -437,31 +587,161 @@
 </section>
 
     <hr>
+<section id="plan">
 
-    <section id="plan">
-      <header>
-        <h2>Plan de hoy</h2>
-        <p>Una guía concreta para avanzar sin perder el foco.</p>
-      </header>
+  <header class="mb-4">
+    <span class="dashboard-etiqueta">
+      ORGANIZACIÓN DIARIA
+    </span>
 
-      <article>
-        <h3>Parcial de Biología Celular</h3>
-        <p><strong>Prioridad:</strong> estudiar el primer tema pendiente.</p>
-        <p><strong>Tarea:</strong> estudiar Organelos y cerrar con 10 minutos de repaso activo.</p>
-        <p><strong>Técnica recomendada:</strong> Pomodoro.</p>
-        <p><strong>Tiempo estimado:</strong> 1 hora.</p>
-        <a href="#pomodoro">Comenzar sesión</a>
+    <h2 class="dashboard-seccion-titulo mb-1">
+      Plan de hoy
+    </h2>
+
+    <p class="text-secondary mb-0">
+      Una guía concreta para avanzar sin perder el foco.
+    </p>
+  </header>
+
+
+  <div class="row g-4">
+
+    <!-- TAREA PRINCIPAL -->
+    <div class="col-12 col-lg-8">
+
+      <article class="plan-principal">
+
+        <div class="d-flex justify-content-between align-items-start gap-3 mb-4">
+
+          <div>
+            <span class="plan-etiqueta">
+              PRIORIDAD DE HOY
+            </span>
+
+            <h3 class="mt-3 mb-1">
+              Parcial de Biología Celular
+            </h3>
+
+            <p class="text-secondary mb-0">
+              Preparación para el próximo examen.
+            </p>
+          </div>
+
+          <span class="plan-tiempo">
+            1 h
+          </span>
+
+        </div>
+
+
+        <div class="plan-tarea">
+
+          <span class="plan-paso">
+            01
+          </span>
+
+          <div>
+            <strong>
+              Estudiar Organelos
+            </strong>
+
+            <p>
+              Trabajá el primer tema pendiente antes de continuar.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="plan-tarea">
+
+          <span class="plan-paso">
+            02
+          </span>
+
+          <div>
+            <strong>
+              Repaso activo
+            </strong>
+
+            <p>
+              Cerrá la sesión con 10 minutos intentando recordar
+              los conceptos sin mirar los apuntes.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="plan-info">
+
+          <div>
+            <span>Técnica recomendada</span>
+            <strong>Pomodoro</strong>
+          </div>
+
+          <div>
+            <span>Tiempo estimado</span>
+            <strong>1 hora</strong>
+          </div>
+
+        </div>
+
+
+        <a
+          href="#pomodoro"
+          class="btn btn-primary mt-4"
+        >
+          Comenzar sesión
+        </a>
+
       </article>
 
-      <aside>
-        <h3>Cómo se calcula</h3>
+    </div>
+
+
+    <!-- COMO SE CALCULA -->
+    <div class="col-12 col-lg-4">
+
+      <aside class="plan-explicacion h-100">
+
+        <span class="plan-explicacion-numero">
+          HOY
+        </span>
+
+        <h3>
+          ¿Cómo se genera el plan?
+        </h3>
+
+        <p>
+          Studify organiza el estudio según tus prioridades.
+        </p>
+
         <ul>
-          <li>Se toma el examen más cercano con temas pendientes.</li>
-          <li>Se reparten las horas restantes entre los días disponibles.</li>
-          <li>La técnica cambia según la cercanía y la cantidad de temas pendientes.</li>
+          <li>
+            Toma primero el examen más cercano.
+          </li>
+
+          <li>
+            Revisa los temas que todavía están pendientes.
+          </li>
+
+          <li>
+            Distribuye el tiempo disponible.
+          </li>
+
+          <li>
+            Recomienda una técnica según la tarea.
+          </li>
         </ul>
+
       </aside>
-    </section>
+
+    </div>
+
+  </div>
+
+</section>
 
     <hr>
 
