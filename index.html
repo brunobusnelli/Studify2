@@ -442,51 +442,144 @@
 
     <hr>
 
-    <section id="pomodoro">
-      <header>
-        <h2>Pomodoro</h2>
-        <p>Enfócate por bloques y registra tus sesiones.</p>
-      </header>
+    <section id="pomodoro" class="pomodoro-section">
+  <header class="mb-4">
+    <span class="pomodoro-etiqueta">MODO ENFOQUE</span>
+    <h2 class="mt-2 mb-2">Pomodoro</h2>
+    <p class="mb-0">
+      Elegí una materia, iniciá el temporizador y concentrate en una sola tarea.
+    </p>
+  </header>
 
-      <section aria-labelledby="temporizador-title">
-        <h3 id="temporizador-title">Temporizador de estudio</h3>
-        <p><time datetime="PT25M">25:00 minutos</time></p>
+  <div class="row g-4 align-items-stretch">
 
-        <label for="pomodoro-materia">Materia</label>
-        <select id="pomodoro-materia" name="materia">
+    <!-- TEMPORIZADOR -->
+    <div class="col-12 col-lg-7">
+      <div class="pomodoro-panel h-100">
+
+        <label for="pomodoro-materia" class="form-label">
+          ¿Qué vas a estudiar?
+        </label>
+
+        <select
+          id="pomodoro-materia"
+          name="materia"
+          class="form-select"
+        >
           <option>Biología</option>
           <option>Matemática</option>
           <option>Historia</option>
           <option>Química</option>
         </select>
 
-        <button type="button">Iniciar</button>
-        <button type="button">Pausar</button>
-        <button type="button">Reiniciar</button>
-      </section>
+        <div class="text-center my-4">
+          <p class="pomodoro-subtitulo mb-1">
+            Sesión de enfoque
+          </p>
 
-      <form>
-        <fieldset>
-          <legend>Registrar sesión manual</legend>
+          <div
+            id="pomodoro-tiempo"
+            class="pomodoro-tiempo"
+            aria-live="polite"
+          >
+            25:00
+          </div>
 
-          <label for="sesion-materia">Materia</label>
-          <select id="sesion-materia" name="materia">
+          <p
+            id="pomodoro-estado"
+            class="pomodoro-estado mb-0"
+          >
+            Listo para comenzar
+          </p>
+        </div>
+
+        <div class="pomodoro-controles">
+          <button
+            id="pomodoro-iniciar"
+            type="button"
+            class="btn btn-light"
+          >
+            Iniciar
+          </button>
+
+          <button
+            id="pomodoro-pausar"
+            type="button"
+            class="btn btn-outline-light"
+          >
+            Pausar
+          </button>
+
+          <button
+            id="pomodoro-reiniciar"
+            type="button"
+            class="btn btn-outline-light"
+          >
+            Reiniciar
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- REGISTRO MANUAL -->
+    <div class="col-12 col-lg-5">
+      <form class="pomodoro-registro h-100">
+        <h3 class="h5 mb-3">Registrar sesión manual</h3>
+
+        <div class="mb-3">
+          <label for="sesion-materia" class="form-label">
+            Materia
+          </label>
+
+          <select
+            id="sesion-materia"
+            name="materia"
+            class="form-select"
+          >
             <option>Biología</option>
             <option>Matemática</option>
             <option>Historia</option>
             <option>Química</option>
           </select>
+        </div>
 
-          <label for="sesion-minutos">Minutos</label>
-          <input id="sesion-minutos" name="minutos" type="number" min="1" value="25">
+        <div class="mb-3">
+          <label for="sesion-minutos" class="form-label">
+            Minutos
+          </label>
 
-          <label for="sesion-fecha">Fecha</label>
-          <input id="sesion-fecha" name="fecha" type="date">
+          <input
+            id="sesion-minutos"
+            name="minutos"
+            type="number"
+            min="1"
+            value="25"
+            class="form-control"
+          >
+        </div>
 
-          <button type="submit">Guardar sesión</button>
-        </fieldset>
+        <div class="mb-3">
+          <label for="sesion-fecha" class="form-label">
+            Fecha
+          </label>
+
+          <input
+            id="sesion-fecha"
+            name="fecha"
+            type="date"
+            class="form-control"
+          >
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+          Guardar sesión
+        </button>
       </form>
-    </section>
+    </div>
+
+  </div>
+</section>
 
     <hr>
 
