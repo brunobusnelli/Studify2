@@ -85,5 +85,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Mostrar tiempo inicial
     actualizarPantalla();
+// ========================================
+// FILTRO DE APUNTES
+// ========================================
 
+const filtroMateria = document.querySelector("#filtro-materia");
+const apuntes = document.querySelectorAll(".apunte-card");
+const contadorApuntes = document.querySelector("#contador-apuntes");
+const mensajeSinResultados = document.querySelector("#sin-resultados");
+
+filtroMateria.addEventListener("change", () => {
+
+    const materiaSeleccionada = filtroMateria.value;
+    let cantidadVisible = 0;
+
+    apuntes.forEach((apunte) => {
+
+        const materiaApunte = apunte.dataset.materia;
+
+        if (
+            materiaSeleccionada === "todos" ||
+            materiaSeleccionada === materiaApunte
+        ) {
+            apunte.classList.remove("d-none");
+            cantidadVisible++;
+        } else {
+            apunte.classList.add("d-none");
+        }
+
+    });
+
+    contadorApuntes.textContent =
+        `${cantidadVisible} apuntes encontrados`;
+
+    if (cantidadVisible === 0) {
+        mensajeSinResultados.classList.remove("d-none");
+    } else {
+        mensajeSinResultados.classList.add("d-none");
+    }
+
+});
 });
