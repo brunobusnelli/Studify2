@@ -96,16 +96,9 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#asistente">Asistente IA</a>
-          </li>
-
-          <li class="nav-item">
             <a class="nav-link" href="#examenes">Exámenes</a>
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="#perfil">Perfil</a>
-          </li>
         </ul>
       </div>
 <div class="sidebar-footer-card">
@@ -1503,137 +1496,292 @@
 
     <hr>
 
-    <section id="asistente">
-      <header>
-        <h2>Asistente IA</h2>
-        <p>Resume, explica y practica con tus apuntes.</p>
-      </header>
-
-      <form>
-        <label for="asistente-apunte">Seleccionar apunte</label>
-        <select id="asistente-apunte" name="apunte">
-          <option>Fisiología Humana - Unidad 2</option>
-          <option>Cálculo Integral - Resumen</option>
-          <option>Historia Argentina - Siglo XIX</option>
-        </select>
-
-        <fieldset>
-          <legend>Tipo de ayuda</legend>
-          <label><input name="modo" type="radio" value="resumen" checked> Resumir</label>
-          <label><input name="modo" type="radio" value="explicacion"> Explicar</label>
-          <label><input name="modo" type="radio" value="preguntas"> Generar preguntas</label>
-        </fieldset>
-
-        <label for="asistente-consulta">Consulta</label>
-        <textarea id="asistente-consulta" name="consulta" rows="5" placeholder="Escribe tu pregunta"></textarea>
-
-        <button type="submit">Enviar consulta</button>
-      </form>
-
-      <section aria-labelledby="historial-ia-title">
-        <h3 id="historial-ia-title">Historial de respuestas</h3>
-        <p>Todavía no hay respuestas guardadas.</p>
-      </section>
-    </section>
-
     <hr>
 
-    <section id="examenes">
-      <header>
-        <h2>Exámenes y calendario</h2>
-        <p>Planifica sesiones según lo que falta estudiar.</p>
-      </header>
+<section id="examenes">
 
-      <section aria-labelledby="lista-examenes-title">
-        <h3 id="lista-examenes-title">Próximos exámenes</h3>
-        <article>
-          <h4>Parcial de Biología Celular</h4>
-          <p>Materia: Biología</p>
-          <p>Fecha: <time datetime="2026-07-08">8 de julio de 2026</time></p>
-          <p>Progreso: 1 de 3 temas completados.</p>
-          <ul>
-            <li><label><input type="checkbox" checked> Membrana celular</label></li>
-            <li><label><input type="checkbox"> Organelos</label></li>
-            <li><label><input type="checkbox"> Transporte celular</label></li>
-          </ul>
-        </article>
+  <header class="mb-4">
+    <span class="dashboard-etiqueta">
+      AGENDA ACADÉMICA
+    </span>
 
-        <article>
-          <h4>Integrales y aplicaciones</h4>
-          <p>Materia: Matemática</p>
-          <p>Fecha: <time datetime="2026-07-15">15 de julio de 2026</time></p>
-          <p>Progreso: 0 de 3 temas completados.</p>
-        </article>
-      </section>
+    <h2 class="dashboard-seccion-titulo mb-1">
+      Exámenes
+    </h2>
 
-      <form>
-        <fieldset>
-          <legend>Nuevo examen</legend>
+    <p class="text-secondary mb-0">
+      Organizá tus próximas evaluaciones y seguí el avance de cada materia.
+    </p>
+  </header>
 
-          <label for="examen-nombre">Nombre del examen</label>
-          <input id="examen-nombre" name="nombre" type="text" required>
 
-          <label for="examen-materia">Materia</label>
-          <select id="examen-materia" name="materia">
+  <div class="row g-4">
+
+    <!-- LISTA DE EXÁMENES -->
+    <div class="col-12 col-xl-7">
+
+      <div class="examenes-lista">
+
+        <div class="examen-card">
+
+          <div class="examen-fecha">
+            <strong>08</strong>
+            <span>JUL</span>
+          </div>
+
+          <div class="examen-contenido">
+
+            <div class="d-flex justify-content-between gap-3 align-items-start">
+
+              <div>
+                <span class="examen-materia">
+                  Biología
+                </span>
+
+                <h3>
+                  Parcial de Biología Celular
+                </h3>
+              </div>
+
+              <span class="examen-badge examen-proximo">
+                Próximo
+              </span>
+
+            </div>
+
+
+            <p class="examen-meta">
+              1 de 3 temas completados
+            </p>
+
+
+            <div class="progress examen-progress">
+              <div
+                class="progress-bar"
+                style="width: 33%">
+              </div>
+            </div>
+
+
+            <div class="examen-temas">
+
+              <label>
+                <input type="checkbox" checked>
+                Membrana celular
+              </label>
+
+              <label>
+                <input type="checkbox">
+                Organelos
+              </label>
+
+              <label>
+                <input type="checkbox">
+                Transporte celular
+              </label>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="examen-card">
+
+          <div class="examen-fecha examen-fecha-secundaria">
+            <strong>15</strong>
+            <span>JUL</span>
+          </div>
+
+          <div class="examen-contenido">
+
+            <div class="d-flex justify-content-between gap-3 align-items-start">
+
+              <div>
+                <span class="examen-materia">
+                  Matemática
+                </span>
+
+                <h3>
+                  Integrales y aplicaciones
+                </h3>
+              </div>
+
+              <span class="examen-badge">
+                Pendiente
+              </span>
+
+            </div>
+
+
+            <p class="examen-meta">
+              0 de 3 temas completados
+            </p>
+
+
+            <div class="progress examen-progress">
+              <div
+                class="progress-bar"
+                style="width: 0%">
+              </div>
+            </div>
+
+
+            <div class="examen-pendiente">
+              Empezá a marcar los temas a medida que avances.
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- NUEVO EXAMEN -->
+    <div class="col-12 col-xl-5">
+
+      <form class="nuevo-examen-card">
+
+        <div class="nuevo-examen-header">
+
+          <div>
+            <span class="dashboard-etiqueta">
+              PLANIFICACIÓN
+            </span>
+
+            <h3>
+              Nuevo examen
+            </h3>
+          </div>
+
+          <span class="nuevo-examen-icono">
+            +
+          </span>
+
+        </div>
+
+
+        <div class="mb-3">
+          <label
+            for="examen-nombre"
+            class="form-label"
+          >
+            Nombre del examen
+          </label>
+
+          <input
+            id="examen-nombre"
+            name="nombre"
+            type="text"
+            class="form-control"
+            placeholder="Ej: Parcial de Química"
+            required
+          >
+        </div>
+
+
+        <div class="mb-3">
+          <label
+            for="examen-materia"
+            class="form-label"
+          >
+            Materia
+          </label>
+
+          <select
+            id="examen-materia"
+            name="materia"
+            class="form-select"
+          >
             <option>Biología</option>
             <option>Matemática</option>
             <option>Historia</option>
             <option>Química</option>
           </select>
+        </div>
 
-          <label for="examen-fecha">Fecha</label>
-          <input id="examen-fecha" name="fecha" type="date" required>
 
-          <label for="examen-horas">Horas estimadas</label>
-          <input id="examen-horas" name="horas" type="number" min="1">
+        <div class="row g-3">
 
-          <label for="examen-temas">Temas separados por coma</label>
-          <textarea id="examen-temas" name="temas" rows="4" required></textarea>
+          <div class="col-12 col-md-6">
+            <label
+              for="examen-fecha"
+              class="form-label"
+            >
+              Fecha
+            </label>
 
-          <button type="submit">Guardar examen</button>
-        </fieldset>
+            <input
+              id="examen-fecha"
+              name="fecha"
+              type="date"
+              class="form-control"
+              required
+            >
+          </div>
+
+
+          <div class="col-12 col-md-6">
+            <label
+              for="examen-horas"
+              class="form-label"
+            >
+              Horas estimadas
+            </label>
+
+            <input
+              id="examen-horas"
+              name="horas"
+              type="number"
+              min="1"
+              class="form-control"
+              placeholder="6"
+            >
+          </div>
+
+        </div>
+
+
+        <div class="mt-3">
+          <label
+            for="examen-temas"
+            class="form-label"
+          >
+            Temas
+          </label>
+
+          <textarea
+            id="examen-temas"
+            name="temas"
+            rows="4"
+            class="form-control"
+            placeholder="Separá los temas por coma"
+            required
+          ></textarea>
+        </div>
+
+
+        <button
+          type="submit"
+          class="btn btn-primary w-100 mt-4"
+        >
+          Guardar examen
+        </button>
+
       </form>
-    </section>
+
+    </div>
+
+  </div>
+
+</section>
 
     <hr>
 
-    <section id="perfil">
-      <header>
-        <h2>Perfil</h2>
-        <p>Tus materias, actividad y logros de estudio.</p>
-      </header>
-
-      <section aria-labelledby="datos-usuario-title">
-        <h3 id="datos-usuario-title">Datos del usuario</h3>
-        <p><strong>Nombre:</strong> Usuario</p>
-        <p><strong>Correo:</strong> estudiante@mail.com</p>
-        <button type="button">Cerrar sesión</button>
-      </section>
-
-      <section aria-labelledby="materias-title">
-        <h3 id="materias-title">Materias</h3>
-        <ul>
-          <li>Biología — objetivo: 8 horas semanales</li>
-          <li>Matemática — objetivo: 7 horas semanales</li>
-          <li>Historia — objetivo: 5 horas semanales</li>
-          <li>Química — objetivo: 6 horas semanales</li>
-        </ul>
-      </section>
-
-      <form>
-        <fieldset>
-          <legend>Nueva materia</legend>
-
-          <label for="materia-nombre">Nombre</label>
-          <input id="materia-nombre" name="nombre" type="text" required>
-
-          <label for="materia-objetivo">Horas objetivo por semana</label>
-          <input id="materia-objetivo" name="objetivo" type="number" min="1" required>
-
-          <button type="submit">Guardar materia</button>
-        </fieldset>
-      </form>
-    </section>
   </main>
 
   <footer>
