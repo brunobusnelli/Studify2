@@ -108,175 +108,217 @@
 </header>
 
   <main>
-<section id="acceso" class="card border-0 shadow-sm mb-4">
-  <div class="card-body p-4">
-  <div class="row">
-    <div class="col-12 col-lg-8">
-    <div class="mb-4">
-      <h2 class="card-title mb-2">Acceso</h2>
-      <p class="text-secondary mb-0">
-        Inicia sesión para organizar tu estudio.
+<section id="acceso" class="dashboard-bienvenida">
+
+  <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+
+    <div>
+      <span class="dashboard-etiqueta">
+        PANEL DE ESTUDIO
+      </span>
+
+      <h1 class="dashboard-titulo">
+        Hola, Bruno!
+      </h1>
+
+      <p class="dashboard-subtitulo">
+        La disciplina de hoy es el éxito de mañana.
       </p>
     </div>
 
-    <form action="#inicio" method="get">
-      <h3 class="h5 text-primary mb-3">Iniciar sesión</h3>
+    <button
+      class="btn btn-outline-primary"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#panel-acceso"
+      aria-expanded="false"
+      aria-controls="panel-acceso"
+    >
+      Mi cuenta
+    </button>
 
-      <div class="mb-3">
-        <label for="login-email" class="form-label">
-          Correo electrónico
-        </label>
-
-        <input
-          id="login-email"
-          name="email"
-          type="email"
-          class="form-control"
-          placeholder="nombre@ejemplo.com"
-          required
-        >
-      </div>
-
-      <div class="mb-3">
-        <label for="login-password" class="form-label">
-          Contraseña
-        </label>
-
-        <input
-          id="login-password"
-          name="password"
-          type="password"
-          class="form-control"
-          placeholder="Ingresá tu contraseña"
-          required
-        >
-      </div>
-
-      <button type="submit" class="btn btn-primary px-4">
-        Ingresar
-      </button>
-    </form>
-
-    <details class="mt-3">
-      <summary class="fw-semibold">
-        Crear una cuenta
-      </summary>
-
-      <form action="#inicio" method="get" class="mt-3">
-
-        <div class="mb-3">
-          <label for="register-name" class="form-label">
-            Nombre
-          </label>
-
-          <input
-            id="register-name"
-            name="name"
-            type="text"
-            class="form-control"
-            required
-          >
-        </div>
-
-        <div class="mb-3">
-          <label for="register-email" class="form-label">
-            Correo electrónico
-          </label>
-
-          <input
-            id="register-email"
-            name="email"
-            type="email"
-            class="form-control"
-            required
-          >
-        </div>
-
-        <div class="mb-3">
-          <label for="register-password" class="form-label">
-            Contraseña
-          </label>
-
-          <input
-            id="register-password"
-            name="password"
-            type="password"
-            class="form-control"
-            required
-          >
-        </div>
-
-        <button type="submit" class="btn btn-outline-primary">
-          Registrarme
-        </button>
-
-      </form>
-    </details>
-    </div>
   </div>
-</div>
+
+
+  <div class="collapse mt-4" id="panel-acceso">
+
+    <div class="row g-4">
+
+      <div class="col-12 col-lg-6">
+
+        <div class="acceso-panel">
+
+          <h2 class="h5 mb-3">
+            Iniciar sesión
+          </h2>
+
+          <form action="#inicio" method="get">
+
+            <div class="mb-3">
+              <label for="login-email" class="form-label">
+                Correo electrónico
+              </label>
+
+              <input
+                id="login-email"
+                name="email"
+                type="email"
+                class="form-control"
+                placeholder="nombre@ejemplo.com"
+                required
+              >
+            </div>
+
+            <div class="mb-3">
+              <label for="login-password" class="form-label">
+                Contraseña
+              </label>
+
+              <input
+                id="login-password"
+                name="password"
+                type="password"
+                class="form-control"
+                placeholder="Ingresá tu contraseña"
+                required
+              >
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              Ingresar
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+
+      <div class="col-12 col-lg-6">
+
+        <div class="acceso-panel">
+
+          <h2 class="h5 mb-3">
+            Crear una cuenta
+          </h2>
+
+          <form action="#inicio" method="get">
+
+            <div class="mb-3">
+              <label for="register-name" class="form-label">
+                Nombre
+              </label>
+
+              <input
+                id="register-name"
+                name="name"
+                type="text"
+                class="form-control"
+                required
+              >
+            </div>
+
+            <div class="mb-3">
+              <label for="register-email" class="form-label">
+                Correo electrónico
+              </label>
+
+              <input
+                id="register-email"
+                name="email"
+                type="email"
+                class="form-control"
+                required
+              >
+            </div>
+
+            <div class="mb-3">
+              <label for="register-password" class="form-label">
+                Contraseña
+              </label>
+
+              <input
+                id="register-password"
+                name="password"
+                type="password"
+                class="form-control"
+                required
+              >
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn-outline-primary"
+            >
+              Registrarme
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
 
     <hr>
 
     <section id="inicio">
-      <header>
-        <h2>Inicio</h2>
-        <p>La disciplina de hoy es el éxito de mañana.</p>
-      </header>
-
       <section aria-labelledby="resumen-title">
-        <h3 id="resumen-title">Resumen de estudio</h3>
-<dl class="row g-3 mb-4">
+   <h2 id="resumen-title" class="dashboard-seccion-titulo">
+  Resumen de estudio
+</h2>
+<dl class="row g-3 mb-4 resumen-dashboard">
 
   <div class="col-12 col-md-6 col-xl-3">
-    <div class="card h-100 border-0 shadow-sm">
-      <div class="card-body">
-        <dt class="text-secondary small mb-2">
-          Horas estudiadas esta semana
-        </dt>
-        <dd class="fs-4 fw-bold text-primary mb-0">
-          3 horas
-        </dd>
+    <div class="resumen-card-nueva resumen-horas">
+      <div class="resumen-icono">◷</div>
+
+      <div>
+        <dt>Horas de estudio</dt>
+        <dd>3 horas</dd>
+        <small>esta semana</small>
       </div>
     </div>
   </div>
 
   <div class="col-12 col-md-6 col-xl-3">
-    <div class="card h-100 border-0 shadow-sm">
-      <div class="card-body">
-        <dt class="text-secondary small mb-2">
-          Racha actual
-        </dt>
-        <dd class="fs-4 fw-bold text-primary mb-0">
-          3 días
-        </dd>
+    <div class="resumen-card-nueva resumen-sesiones">
+      <div class="resumen-icono">◎</div>
+
+      <div>
+        <dt>Sesiones completadas</dt>
+        <dd>3</dd>
+        <small>registros de estudio</small>
       </div>
     </div>
   </div>
 
   <div class="col-12 col-md-6 col-xl-3">
-    <div class="card h-100 border-0 shadow-sm">
-      <div class="card-body">
-        <dt class="text-secondary small mb-2">
-          Sesiones completadas
-        </dt>
-        <dd class="fs-4 fw-bold text-primary mb-0">
-          3
-        </dd>
+    <div class="resumen-card-nueva resumen-racha">
+      <div class="resumen-icono">↗</div>
+
+      <div>
+        <dt>Racha actual</dt>
+        <dd>3 días</dd>
+        <small>seguí así</small>
       </div>
     </div>
   </div>
 
   <div class="col-12 col-md-6 col-xl-3">
-    <div class="card h-100 border-0 shadow-sm">
-      <div class="card-body">
-        <dt class="text-secondary small mb-2">
-          Apuntes guardados
-        </dt>
-        <dd class="fs-4 fw-bold text-primary mb-0">
-          3
-        </dd>
+    <div class="resumen-card-nueva resumen-apuntes">
+      <div class="resumen-icono">▣</div>
+
+      <div>
+        <dt>Apuntes guardados</dt>
+        <dd>3</dd>
+        <small>documentos</small>
       </div>
     </div>
   </div>
@@ -284,37 +326,112 @@
 </dl>
       </section>
 
-<section aria-labelledby="actividad-title" class="mt-4">
+<section class="dashboard-modulos mt-4">
 
-  <h3 id="actividad-title" class="mb-3">
-    Actividad semanal
-  </h3>
+  <div class="row g-4">
 
-  <div class="table-responsive">
-    <table class="table table-striped table-hover align-middle mb-0">
+    <!-- APUNTES RECIENTES -->
+    <div class="col-12 col-xl-5">
+      <div class="dashboard-card h-100">
 
-      <caption class="caption-top text-secondary small">
-        Minutos estudiados por día
-      </caption>
+        <div class="dashboard-card-header">
+          <h3>Mis apuntes recientes</h3>
 
-      <thead class="table-light">
-        <tr>
-          <th scope="col">Día</th>
-          <th scope="col">Minutos</th>
-        </tr>
-      </thead>
+          <a href="#apuntes">
+            Ver todos
+          </a>
+        </div>
 
-      <tbody>
-        <tr><td>Lunes</td><td>0</td></tr>
-        <tr><td>Martes</td><td>0</td></tr>
-        <tr><td>Miércoles</td><td>0</td></tr>
-        <tr><td>Jueves</td><td>0</td></tr>
-        <tr><td>Viernes</td><td>50</td></tr>
-        <tr><td>Sábado</td><td>110</td></tr>
-        <tr><td>Domingo</td><td>0</td></tr>
-      </tbody>
+        <div class="apunte-reciente">
+          <div class="archivo-icono">PDF</div>
 
-    </table>
+          <div>
+            <strong>Fisiología Humana - Unidad 2</strong>
+            <p>Biología · 2.4 MB</p>
+          </div>
+        </div>
+
+        <div class="apunte-reciente">
+          <div class="archivo-icono">PDF</div>
+
+          <div>
+            <strong>Cálculo Integral - Resumen</strong>
+            <p>Matemática · 1.8 MB</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- POMODORO -->
+    <div class="col-12 col-md-6 col-xl-3">
+      <div class="dashboard-card dashboard-pomodoro h-100">
+
+        <h3>Pomodoro</h3>
+
+        <div class="pomodoro-mini">
+          <div class="pomodoro-mini-circulo">
+
+            <strong>25:00</strong>
+
+            <span>
+              Tiempo de estudio
+            </span>
+
+          </div>
+        </div>
+
+        <a
+          href="#pomodoro"
+          class="btn btn-primary w-100"
+        >
+          Iniciar sesión
+        </a>
+
+      </div>
+    </div>
+
+
+    <!-- PLAN DE HOY -->
+    <div class="col-12 col-md-6 col-xl-4">
+      <div class="dashboard-card h-100">
+
+        <h3>Plan de hoy</h3>
+
+        <span class="plan-etiqueta">
+          PRIORIDAD
+        </span>
+
+        <h4 class="h5 mt-3">
+          Parcial de Biología Celular
+        </h4>
+
+        <p class="text-secondary">
+          Estudiar Organelos y cerrar con
+          10 minutos de repaso activo.
+        </p>
+
+        <div class="plan-dato">
+          <span>Técnica</span>
+          <strong>Pomodoro</strong>
+        </div>
+
+        <div class="plan-dato">
+          <span>Tiempo estimado</span>
+          <strong>1 hora</strong>
+        </div>
+
+        <a
+          href="#plan"
+          class="btn btn-outline-primary w-100 mt-3"
+        >
+          Ver plan completo
+        </a>
+
+      </div>
+    </div>
+
   </div>
 
 </section>
