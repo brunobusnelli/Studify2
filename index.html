@@ -66,7 +66,7 @@
       <div class="collapse navbar-collapse" id="navbarStudify">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#inicio">Inicio</a>
+            <a class="nav-link active" href="#inicio">Inicio</a>
           </li>
 
           <li class="nav-item">
@@ -569,30 +569,141 @@
 
     <hr>
 
-    <section id="estadisticas">
-      <header>
-        <h2>Estadísticas</h2>
-        <p>Mira cómo avanza tu estudio esta semana.</p>
-      </header>
+ <section id="estadisticas">
 
-      <p><strong>Total semanal:</strong> 3 horas</p>
-      <table>
-        <caption>Tiempo por materia</caption>
+  <header class="mb-4">
+    <span class="dashboard-etiqueta">
+      TU PROGRESO
+    </span>
+
+    <h2 class="dashboard-seccion-titulo mb-1">
+      Estadísticas
+    </h2>
+
+    <p class="text-secondary">
+      Revisá cuánto estudiaste y cómo venís con tus objetivos.
+    </p>
+  </header>
+
+
+  <div class="row g-3 mb-4">
+
+    <div class="col-12 col-md-4">
+      <div class="estadistica-dato">
+        <span>Tiempo semanal</span>
+        <strong>3 h</strong>
+        <small>160 minutos registrados</small>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <div class="estadistica-dato">
+        <span>Materia principal</span>
+        <strong>Matemática</strong>
+        <small>75 minutos estudiados</small>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-4">
+      <div class="estadistica-dato">
+        <span>Sesiones</span>
+        <strong>3</strong>
+        <small>esta semana</small>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="dashboard-card">
+
+    <div class="dashboard-card-header">
+      <h3>Tiempo por materia</h3>
+      <span class="text-secondary small">
+        Esta semana
+      </span>
+    </div>
+
+    <div class="table-responsive">
+
+      <table class="table align-middle mb-0">
+
         <thead>
           <tr>
             <th>Materia</th>
             <th>Tiempo estudiado</th>
-            <th>Objetivo semanal</th>
+            <th>Objetivo</th>
+            <th>Progreso</th>
           </tr>
         </thead>
+
         <tbody>
-          <tr><td>Biología</td><td>50 minutos</td><td>8 horas</td></tr>
-          <tr><td>Matemática</td><td>75 minutos</td><td>7 horas</td></tr>
-          <tr><td>Historia</td><td>35 minutos</td><td>5 horas</td></tr>
-          <tr><td>Química</td><td>0 minutos</td><td>6 horas</td></tr>
+
+          <tr>
+            <td>Biología</td>
+            <td>50 min</td>
+            <td>8 h</td>
+            <td>
+              <div class="progress">
+                <div
+                  class="progress-bar"
+                  style="width: 10%">
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Matemática</td>
+            <td>75 min</td>
+            <td>7 h</td>
+            <td>
+              <div class="progress">
+                <div
+                  class="progress-bar"
+                  style="width: 18%">
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Historia</td>
+            <td>35 min</td>
+            <td>5 h</td>
+            <td>
+              <div class="progress">
+                <div
+                  class="progress-bar"
+                  style="width: 12%">
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Química</td>
+            <td>0 min</td>
+            <td>6 h</td>
+            <td>
+              <div class="progress">
+                <div
+                  class="progress-bar"
+                  style="width: 0%">
+                </div>
+              </div>
+            </td>
+          </tr>
+
         </tbody>
+
       </table>
-    </section>
+
+    </div>
+
+  </div>
+
+</section>
 
     <hr>
 

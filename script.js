@@ -154,5 +154,23 @@ formSesion.addEventListener("submit", (evento) => {
     mensajeSesion.classList.remove("d-none");
 
 });
+// ========================================
+// NAVEGACION ACTIVA
+// ========================================
 
+const enlacesMenu = document.querySelectorAll(".nav-link");
+
+enlacesMenu.forEach((enlace) => {
+
+    enlace.addEventListener("click", () => {
+
+        enlacesMenu.forEach((item) => {
+            item.classList.remove("active");
+        });
+
+        enlace.classList.add("active");
+
+    });
+
+});
 });
