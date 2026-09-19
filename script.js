@@ -118,11 +118,41 @@ filtroMateria.addEventListener("change", () => {
     contadorApuntes.textContent =
         `${cantidadVisible} apuntes encontrados`;
 
-    if (cantidadVisible === 0) {
-        mensajeSinResultados.classList.remove("d-none");
-    } else {
-        mensajeSinResultados.classList.add("d-none");
-    }
+  if (cantidadVisible === 0) {
+    mensajeSinResultados.classList.remove("d-none");
+} else {
+    mensajeSinResultados.classList.add("d-none");
+}
 
 });
+
+// ========================================
+// REGISTRO MANUAL DE SESIONES
+// ========================================
+
+const formSesion = document.querySelector("#form-sesion");
+const sesionMateria = document.querySelector("#sesion-materia");
+const sesionMinutos = document.querySelector("#sesion-minutos");
+const sesionFecha = document.querySelector("#sesion-fecha");
+const mensajeSesion = document.querySelector("#mensaje-sesion");
+
+formSesion.addEventListener("submit", (evento) => {
+
+    evento.preventDefault();
+
+    const materiaElegida = sesionMateria.value;
+    const minutos = sesionMinutos.value;
+    const fecha = sesionFecha.value;
+
+    mensajeSesion.textContent =
+        `Sesión guardada: ${materiaElegida} - ${minutos} minutos`;
+
+    if (fecha !== "") {
+        mensajeSesion.textContent += ` - ${fecha}`;
+    }
+
+    mensajeSesion.classList.remove("d-none");
+
+});
+
 });
