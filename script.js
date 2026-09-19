@@ -158,19 +158,73 @@ formSesion.addEventListener("submit", (evento) => {
 // NAVEGACION ACTIVA
 // ========================================
 
+/* ========================================
+   NAVEGACION ACTIVA SEGUN LA SECCION
+   ======================================== */
+
 const enlacesMenu = document.querySelectorAll(".nav-link");
 
-enlacesMenu.forEach((enlace) => {
+const seccionesMenu = Array.from(enlacesMenu)
+  .map((enlace) => {
+    const destino = enlace.getAttribute("href");
 
-    enlace.addEventListener("click", () => {
+    if (!destino || !destino.startsWith("#")) {
+      return null;
+    }
 
-        enlacesMenu.forEach((item) => {
-            item.classList.remove("active");
-        });
+    return document.querySelector(destino);
+  })
+  .filter(Boolean);
 
-        enlace.classList.add("active");
 
-    });
+function activarEnlace(idSeccion) {
 
+  enlacesMenu.forEach((enlace) => {
+
+    enlace.classList.remove("active");
+
+    if (enlace.getAttribute("href") === `#${idSeccion}`) {
+      enlace.classList.add("active");
+    }
+
+  });
+
+}
+
+
+const observadorSecciones = new IntersectionObserver(
+  (entradas) => {
+
+    const seccionesVisibles = entradas
+      .filter((entrada) => entrada.isIntersecting)
+      .sort(
+        (a, b) =>
+          b.intersectionRatio - a.intersectionRatio
+      );
+
+    if (seccionesVisibles.length > 0) {
+
+      const seccionActual =
+        seccionesVisibles[0].target.id;
+
+      activarEnlace(seccionActual);
+
+    }
+
+  },
+  {
+    rootMargin: "-25% 0px -55% 0px",
+    threshold: [
+      0,
+      0.1,
+      0.25,
+      0.5
+    ]
+  }
+);
+
+
+seccionesMenu.forEach((seccion) => {
+  observadorSecciones.observe(seccion);
 });
 });

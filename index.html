@@ -33,6 +33,10 @@
   href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap"
   rel="stylesheet"
 >
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+>
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -72,31 +76,51 @@
       <div class="collapse navbar-collapse" id="navbarStudify">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" href="#inicio">Inicio</a>
+<a class="nav-link active" href="#inicio">
+  <i class="bi bi-house-door"></i>
+  <span>Inicio</span>
+</a>          </li>
+
+          <li class="nav-item">
+  <a class="nav-link" href="#plan">
+  <i class="bi bi-check2-square"></i>
+  <span>Plan de hoy</span>
+</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#plan">Plan de hoy</a>
+          <a class="nav-link" href="#apuntes">
+  <i class="bi bi-journal-text"></i>
+  <span>Mis apuntes</span>
+</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#apuntes">Mis apuntes</a>
+           <a class="nav-link" href="#estadisticas">
+  <i class="bi bi-bar-chart-line"></i>
+  <span>Estadísticas</span>
+</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#estadisticas">Estadísticas</a>
+     <a class="nav-link" href="#pomodoro">
+  <i class="bi bi-stopwatch"></i>
+  <span>Pomodoro</span>
+</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#pomodoro">Pomodoro</a>
+     <a class="nav-link" href="#tecnicas">
+  <i class="bi bi-lightbulb"></i>
+  <span>Técnicas</span>
+</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#tecnicas">Técnicas</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#examenes">Exámenes</a>
+          <a class="nav-link" href="#examenes">
+  <i class="bi bi-calendar-event"></i>
+  <span>Exámenes</span>
+</a>
           </li>
 
         </ul>
@@ -411,63 +435,170 @@
 
     <hr>
 
-    <section id="inicio">
-      <section aria-labelledby="resumen-title">
-   <h2 id="resumen-title" class="dashboard-seccion-titulo">
-  Resumen de estudio
-</h2>
-<dl class="row g-3 mb-4 resumen-dashboard">
+ <section id="inicio">
 
-  <div class="col-12 col-md-6 col-xl-3">
-    <div class="resumen-card-nueva resumen-horas">
-      <div class="resumen-icono">◷</div>
+  <!-- =====================================
+       BIENVENIDA / OBJETIVO SEMANAL
+       ===================================== -->
 
-      <div>
-        <dt>Horas de estudio</dt>
-        <dd>3 horas</dd>
-        <small>esta semana</small>
-      </div>
+  <div class="dashboard-welcome">
+
+    <div class="dashboard-welcome-text">
+
+      <span class="dashboard-welcome-eyebrow">
+        <i class="bi bi-grid"></i>
+        PANEL DE ESTUDIO
+      </span>
+
+      <h2>
+        Hola, Bruno 👋
+      </h2>
+
+      <p>
+        Tenés una buena semana. Seguí avanzando con tu planificación.
+      </p>
+
     </div>
+
+
+    <div class="dashboard-week">
+
+      <div class="dashboard-week-top">
+
+        <div>
+          <span>Objetivo semanal</span>
+          <strong>3 de 5 horas</strong>
+        </div>
+
+        <div class="dashboard-week-percent">
+          60%
+        </div>
+
+      </div>
+
+
+      <div class="dashboard-week-bar">
+        <span></span>
+      </div>
+
+
+      <div class="dashboard-week-footer">
+
+        <span>
+          <i class="bi bi-lightning-charge-fill"></i>
+          2 horas para completar tu meta
+        </span>
+
+        <strong>
+          +20%
+          <i class="bi bi-arrow-up-right"></i>
+        </strong>
+
+      </div>
+
+    </div>
+
   </div>
 
-  <div class="col-12 col-md-6 col-xl-3">
-    <div class="resumen-card-nueva resumen-sesiones">
-      <div class="resumen-icono">◎</div>
 
-      <div>
-        <dt>Sesiones completadas</dt>
-        <dd>3</dd>
-        <small>registros de estudio</small>
+  <!-- =====================================
+       RESUMEN DE ESTUDIO
+       ===================================== -->
+
+  <section aria-labelledby="resumen-title">
+
+    <h2
+      id="resumen-title"
+      class="dashboard-seccion-titulo"
+    >
+      Resumen de estudio
+    </h2>
+
+
+    <dl class="row g-3 mb-4 resumen-dashboard">
+
+      <!-- HORAS -->
+      <div class="col-12 col-md-6 col-xl-3">
+
+        <div class="resumen-card-nueva resumen-horas">
+
+          <div class="resumen-icono">
+            <i class="bi bi-clock-history"></i>
+          </div>
+
+          <div>
+            <dt>Horas de estudio</dt>
+            <dd>3 horas</dd>
+            <small>esta semana</small>
+          </div>
+
+        </div>
+
       </div>
-    </div>
-  </div>
 
-  <div class="col-12 col-md-6 col-xl-3">
-    <div class="resumen-card-nueva resumen-racha">
-      <div class="resumen-icono">↗</div>
 
-      <div>
-        <dt>Racha actual</dt>
-        <dd>3 días</dd>
-        <small>seguí así</small>
+      <!-- SESIONES -->
+      <div class="col-12 col-md-6 col-xl-3">
+
+        <div class="resumen-card-nueva resumen-sesiones">
+
+          <div class="resumen-icono">
+            <i class="bi bi-bullseye"></i>
+          </div>
+
+          <div>
+            <dt>Sesiones completadas</dt>
+            <dd>3</dd>
+            <small>registros de estudio</small>
+          </div>
+
+        </div>
+
       </div>
-    </div>
-  </div>
 
-  <div class="col-12 col-md-6 col-xl-3">
-    <div class="resumen-card-nueva resumen-apuntes">
-      <div class="resumen-icono">▣</div>
 
-      <div>
-        <dt>Apuntes guardados</dt>
-        <dd>3</dd>
-        <small>documentos</small>
+      <!-- RACHA -->
+      <div class="col-12 col-md-6 col-xl-3">
+
+        <div class="resumen-card-nueva resumen-racha">
+
+          <div class="resumen-icono">
+            <i class="bi bi-fire"></i>
+          </div>
+
+          <div>
+            <dt>Racha actual</dt>
+            <dd>3 días</dd>
+            <small>seguí así</small>
+          </div>
+
+        </div>
+
       </div>
-    </div>
-  </div>
 
-</dl>
-      </section>
+
+      <!-- APUNTES -->
+      <div class="col-12 col-md-6 col-xl-3">
+
+        <div class="resumen-card-nueva resumen-apuntes">
+
+          <div class="resumen-icono">
+            <i class="bi bi-file-earmark-text"></i>
+          </div>
+
+          <div>
+            <dt>Apuntes guardados</dt>
+            <dd>3</dd>
+            <small>documentos</small>
+          </div>
+
+        </div>
+
+      </div>
+
+    </dl>
+
+  </section>
 
 <section class="dashboard-modulos mt-4">
 
@@ -592,85 +723,178 @@
     </h2>
 
     <p class="text-secondary mb-0">
-      Una guía concreta para avanzar sin perder el foco.
+      Una ruta simple para avanzar sin perder el foco.
     </p>
   </header>
 
 
   <div class="row g-4">
 
-    <!-- TAREA PRINCIPAL -->
-    <div class="col-12 col-lg-8">
+    <!-- BLOQUE PRINCIPAL -->
+    <div class="col-12 col-xl-7">
 
-      <article class="plan-principal">
+      <article class="plan-focus-card h-100">
 
-        <div class="d-flex justify-content-between align-items-start gap-3 mb-4">
+        <div class="plan-focus-header">
 
           <div>
-            <span class="plan-etiqueta">
+            <span class="plan-focus-label">
               PRIORIDAD DE HOY
             </span>
 
-            <h3 class="mt-3 mb-1">
+            <h3>
               Parcial de Biología Celular
             </h3>
 
-            <p class="text-secondary mb-0">
-              Preparación para el próximo examen.
+            <p>
+              Preparación para tu próximo examen.
             </p>
           </div>
 
-          <span class="plan-tiempo">
+          <div class="plan-focus-tiempo">
+            <i class="bi bi-clock"></i>
             1 h
-          </span>
-
-        </div>
-
-
-        <div class="plan-tarea">
-
-          <span class="plan-paso">
-            01
-          </span>
-
-          <div>
-            <strong>
-              Estudiar Organelos
-            </strong>
-
-            <p>
-              Trabajá el primer tema pendiente antes de continuar.
-            </p>
           </div>
 
         </div>
 
 
-        <div class="plan-tarea">
+        <div class="plan-focus-progress">
 
-          <span class="plan-paso">
-            02
-          </span>
+          <div class="plan-focus-progress-top">
+            <span>Progreso del plan</span>
+            <strong>50%</strong>
+          </div>
 
-          <div>
-            <strong>
-              Repaso activo
-            </strong>
-
-            <p>
-              Cerrá la sesión con 10 minutos intentando recordar
-              los conceptos sin mirar los apuntes.
-            </p>
+          <div class="plan-focus-bar">
+            <span></span>
           </div>
 
         </div>
 
 
-        <div class="plan-info">
+        <div class="plan-focus-tareas">
+
+          <div class="plan-focus-tarea completada">
+
+            <div class="plan-focus-check">
+              <i class="bi bi-check-lg"></i>
+            </div>
+
+            <div>
+              <span>PASO 01</span>
+
+              <strong>
+                Repasar conceptos principales
+              </strong>
+
+              <p>
+                Revisá los puntos clave antes de comenzar.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="plan-focus-tarea">
+
+            <div class="plan-focus-check">
+              02
+            </div>
+
+            <div>
+              <span>PASO 02</span>
+
+              <strong>
+                Estudiar Organelos
+              </strong>
+
+              <p>
+                Concentrate en funciones y diferencias principales.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="plan-focus-tarea">
+
+            <div class="plan-focus-check">
+              03
+            </div>
+
+            <div>
+              <span>PASO 03</span>
+
+              <strong>
+                Repaso activo
+              </strong>
+
+              <p>
+                Cerrá intentando recordar los conceptos sin mirar.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <a
+          href="#pomodoro"
+          class="btn plan-focus-btn"
+        >
+          <i class="bi bi-play-fill"></i>
+          Comenzar sesión
+        </a>
+
+      </article>
+
+    </div>
+
+
+    <!-- PANEL LATERAL -->
+    <div class="col-12 col-xl-5">
+
+      <div class="plan-side-card h-100">
+
+        <div class="plan-side-header">
+
+          <div>
+            <span class="plan-side-label">
+              ESTRATEGIA
+            </span>
+
+            <h3>
+              Tu sesión ideal
+            </h3>
+          </div>
+
+          <div class="plan-side-icon">
+            <i class="bi bi-lightning-charge"></i>
+          </div>
+
+        </div>
+
+
+        <div class="plan-side-item">
+
+          <div class="plan-side-item-icon">
+            <i class="bi bi-stopwatch"></i>
+          </div>
 
           <div>
             <span>Técnica recomendada</span>
             <strong>Pomodoro</strong>
+          </div>
+
+        </div>
+
+
+        <div class="plan-side-item">
+
+          <div class="plan-side-item-icon">
+            <i class="bi bi-hourglass-split"></i>
           </div>
 
           <div>
@@ -681,54 +905,35 @@
         </div>
 
 
-        <a
-          href="#pomodoro"
-          class="btn btn-primary mt-4"
-        >
-          Comenzar sesión
-        </a>
+        <div class="plan-side-item">
 
-      </article>
+          <div class="plan-side-item-icon">
+            <i class="bi bi-book"></i>
+          </div>
 
-    </div>
+          <div>
+            <span>Materia</span>
+            <strong>Biología</strong>
+          </div>
+
+        </div>
 
 
-    <!-- COMO SE CALCULA -->
-    <div class="col-12 col-lg-4">
+        <div class="plan-side-tip">
 
-      <aside class="plan-explicacion h-100">
+          <i class="bi bi-stars"></i>
 
-        <span class="plan-explicacion-numero">
-          HOY
-        </span>
+          <div>
+            <strong>Consejo Studify</strong>
 
-        <h3>
-          ¿Cómo se genera el plan?
-        </h3>
+            <p>
+              Empezá por el tema más difícil mientras tenés más energía.
+            </p>
+          </div>
 
-        <p>
-          Studify organiza el estudio según tus prioridades.
-        </p>
+        </div>
 
-        <ul>
-          <li>
-            Toma primero el examen más cercano.
-          </li>
-
-          <li>
-            Revisa los temas que todavía están pendientes.
-          </li>
-
-          <li>
-            Distribuye el tiempo disponible.
-          </li>
-
-          <li>
-            Recomienda una técnica según la tarea.
-          </li>
-        </ul>
-
-      </aside>
+      </div>
 
     </div>
 
@@ -742,7 +947,7 @@
 
   <header class="mb-4">
     <span class="dashboard-etiqueta">
-      MIS MATERIALES
+      BIBLIOTECA PERSONAL
     </span>
 
     <h2 class="dashboard-seccion-titulo mb-1">
@@ -750,19 +955,33 @@
     </h2>
 
     <p class="text-secondary mb-0">
-      Organizá tus materiales y encontralos rápido por materia.
+      Encontrá rápido tus materiales y organizalos por materia.
     </p>
   </header>
 
 
-  <div class="row g-3 align-items-end mb-4">
+  <div class="apuntes-toolbar">
 
-    <div class="col-12 col-md-5">
+    <div class="apuntes-toolbar-info">
 
-      <label
-        for="filtro-materia"
-        class="form-label"
-      >
+      <div class="apuntes-toolbar-icon">
+        <i class="bi bi-folder2-open"></i>
+      </div>
+
+      <div>
+        <span>Tus materiales</span>
+
+        <strong id="contador-apuntes">
+          3 apuntes encontrados
+        </strong>
+      </div>
+
+    </div>
+
+
+    <div class="apuntes-filtro">
+
+      <label for="filtro-materia">
         Filtrar por materia
       </label>
 
@@ -780,302 +999,295 @@
 
     </div>
 
+  </div>
 
-    <div class="col-12 col-md-7 text-md-end">
 
-      <p
-        id="contador-apuntes"
-        class="text-secondary small mb-0"
+  <div class="row g-4 mt-1">
+
+    <!-- BIOLOGIA -->
+    <div class="col-12 col-md-6 col-xl-4">
+
+      <article
+        class="apunte-card apunte-card-premium"
+        data-materia="biologia"
       >
-        3 apuntes encontrados
-      </p>
+
+        <div class="apunte-preview apunte-preview-biologia">
+
+          <div class="apunte-documento">
+            <i class="bi bi-file-earmark-pdf"></i>
+          </div>
+
+          <span>
+            PDF
+          </span>
+
+        </div>
+
+
+        <div class="apunte-card-contenido">
+
+          <div class="apunte-card-top">
+
+            <span class="apunte-materia">
+              Biología
+            </span>
+
+            <button
+              type="button"
+              class="apunte-menu"
+              aria-label="Opciones del apunte"
+            >
+              <i class="bi bi-three-dots"></i>
+            </button>
+
+          </div>
+
+
+          <h3>
+            Fisiología Humana - Unidad 2
+          </h3>
+
+          <p>
+            Material de estudio y resumen de conceptos principales.
+          </p>
+
+
+          <div class="apunte-detalles">
+
+            <span>
+              <i class="bi bi-file-earmark"></i>
+              2.4 MB
+            </span>
+
+            <span>
+              <i class="bi bi-clock"></i>
+              Reciente
+            </span>
+
+          </div>
+
+
+          <div class="apunte-acciones">
+
+            <button
+              type="button"
+              class="btn apunte-btn-principal"
+            >
+              <i class="bi bi-eye"></i>
+              Abrir
+            </button>
+
+            <button
+              type="button"
+              class="btn apunte-btn-secundario"
+            >
+              <i class="bi bi-pencil"></i>
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+
+    <!-- MATEMATICA -->
+    <div class="col-12 col-md-6 col-xl-4">
+
+      <article
+        class="apunte-card apunte-card-premium"
+        data-materia="matematica"
+      >
+
+        <div class="apunte-preview apunte-preview-matematica">
+
+          <div class="apunte-documento">
+            <i class="bi bi-file-earmark-pdf"></i>
+          </div>
+
+          <span>PDF</span>
+
+        </div>
+
+
+        <div class="apunte-card-contenido">
+
+          <div class="apunte-card-top">
+
+            <span class="apunte-materia">
+              Matemática
+            </span>
+
+            <button
+              type="button"
+              class="apunte-menu"
+              aria-label="Opciones del apunte"
+            >
+              <i class="bi bi-three-dots"></i>
+            </button>
+
+          </div>
+
+
+          <h3>
+            Cálculo Integral - Resumen
+          </h3>
+
+          <p>
+            Fórmulas, ejercicios y conceptos para repasar antes del parcial.
+          </p>
+
+
+          <div class="apunte-detalles">
+
+            <span>
+              <i class="bi bi-file-earmark"></i>
+              1.8 MB
+            </span>
+
+            <span>
+              <i class="bi bi-clock"></i>
+              Ayer
+            </span>
+
+          </div>
+
+
+          <div class="apunte-acciones">
+
+            <button
+              type="button"
+              class="btn apunte-btn-principal"
+            >
+              <i class="bi bi-eye"></i>
+              Abrir
+            </button>
+
+            <button
+              type="button"
+              class="btn apunte-btn-secundario"
+            >
+              <i class="bi bi-pencil"></i>
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+
+    <!-- HISTORIA -->
+    <div class="col-12 col-md-6 col-xl-4">
+
+      <article
+        class="apunte-card apunte-card-premium"
+        data-materia="historia"
+      >
+
+        <div class="apunte-preview apunte-preview-historia">
+
+          <div class="apunte-documento">
+            <i class="bi bi-file-earmark-text"></i>
+          </div>
+
+          <span>PDF</span>
+
+        </div>
+
+
+        <div class="apunte-card-contenido">
+
+          <div class="apunte-card-top">
+
+            <span class="apunte-materia">
+              Historia
+            </span>
+
+            <button
+              type="button"
+              class="apunte-menu"
+              aria-label="Opciones del apunte"
+            >
+              <i class="bi bi-three-dots"></i>
+            </button>
+
+          </div>
+
+
+          <h3>
+            Revolución Industrial
+          </h3>
+
+          <p>
+            Resumen general con fechas y acontecimientos principales.
+          </p>
+
+
+          <div class="apunte-detalles">
+
+            <span>
+              <i class="bi bi-file-earmark"></i>
+              1.2 MB
+            </span>
+
+            <span>
+              <i class="bi bi-clock"></i>
+              3 días
+            </span>
+
+          </div>
+
+
+          <div class="apunte-acciones">
+
+            <button
+              type="button"
+              class="btn apunte-btn-principal"
+            >
+              <i class="bi bi-eye"></i>
+              Abrir
+            </button>
+
+            <button
+              type="button"
+              class="btn apunte-btn-secundario"
+            >
+              <i class="bi bi-pencil"></i>
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
 
     </div>
 
   </div>
 
 
-  <section aria-labelledby="lista-apuntes-title">
-
-    <h3
-      id="lista-apuntes-title"
-      class="visually-hidden"
-    >
-      Apuntes guardados
-    </h3>
-
-
-    <div class="row g-4">
-
-      <div class="col-12 col-md-6 col-xl-4">
-
-        <article
-          class="apunte-card apunte-card-nueva"
-          data-materia="biologia"
-        >
-
-          <div class="apunte-card-superior">
-
-            <span class="archivo-icono">
-              PDF
-            </span>
-
-            <span class="apunte-materia">
-              Biología
-            </span>
-
-          </div>
-
-          <h4>
-            Fisiología Humana - Unidad 2
-          </h4>
-
-          <p class="apunte-meta">
-            PDF · 2.4 MB
-          </p>
-
-          <div class="apunte-acciones">
-
-            <button
-              type="button"
-              class="btn btn-primary btn-sm"
-            >
-              Abrir
-            </button>
-
-            <button
-              type="button"
-              class="btn btn-outline-secondary btn-sm"
-            >
-              Editar
-            </button>
-
-            <button
-              type="button"
-              class="btn btn-outline-danger btn-sm"
-            >
-              Eliminar
-            </button>
-
-          </div>
-
-        </article>
-
-      </div>
-
-
-      <div class="col-12 col-md-6 col-xl-4">
-
-        <article
-          class="apunte-card apunte-card-nueva"
-          data-materia="matematica"
-        >
-
-          <div class="apunte-card-superior">
-
-            <span class="archivo-icono">
-              PDF
-            </span>
-
-            <span class="apunte-materia">
-              Matemática
-            </span>
-
-          </div>
-
-          <h4>
-            Cálculo Integral - Resumen
-          </h4>
-
-          <p class="apunte-meta">
-            PDF · 1.8 MB
-          </p>
-
-          <div class="apunte-acciones">
-
-            <button
-              type="button"
-              class="btn btn-primary btn-sm"
-            >
-              Abrir
-            </button>
-
-            <button
-              type="button"
-              class="btn btn-outline-secondary btn-sm"
-            >
-              Editar
-            </button>
-
-            <button
-              type="button"
-              class="btn btn-outline-danger btn-sm"
-            >
-              Eliminar
-            </button>
-
-          </div>
-
-        </article>
-
-      </div>
-
-
-      <div class="col-12 col-md-6 col-xl-4">
-
-        <article
-          class="apunte-card apunte-card-nueva"
-          data-materia="historia"
-        >
-
-          <div class="apunte-card-superior">
-
-            <span class="archivo-icono">
-              PDF
-            </span>
-
-            <span class="apunte-materia">
-              Historia
-            </span>
-
-          </div>
-
-          <h4>
-            Historia Argentina - Siglo XIX
-          </h4>
-
-          <p class="apunte-meta">
-            PDF · 3.1 MB
-          </p>
-
-          <div class="apunte-acciones">
-
-            <button
-              type="button"
-              class="btn btn-primary btn-sm"
-            >
-              Abrir
-            </button>
-
-            <button
-              type="button"
-              class="btn btn-outline-secondary btn-sm"
-            >
-              Editar
-            </button>
-
-            <button
-              type="button"
-              class="btn btn-outline-danger btn-sm"
-            >
-              Eliminar
-            </button>
-
-          </div>
-
-        </article>
-
-      </div>
-
-    </div>
-
-
-    <p
-      id="sin-resultados"
-      class="text-secondary text-center py-4 d-none"
-    >
-      No hay apuntes guardados para esta materia.
-    </p>
-
-  </section>
-
-
-  <form
-    enctype="multipart/form-data"
-    class="dashboard-card mt-4"
+  <p
+    id="sin-resultados"
+    class="apuntes-sin-resultados d-none"
   >
-
-    <h3 class="h5 mb-3">
-      Nuevo apunte
-    </h3>
-
-    <div class="row g-3">
-
-      <div class="col-12 col-md-6">
-        <label
-          for="apunte-titulo"
-          class="form-label"
-        >
-          Título
-        </label>
-
-        <input
-          id="apunte-titulo"
-          name="titulo"
-          type="text"
-          class="form-control"
-          required
-        >
-      </div>
-
-
-      <div class="col-12 col-md-6">
-        <label
-          for="apunte-materia"
-          class="form-label"
-        >
-          Materia
-        </label>
-
-        <select
-          id="apunte-materia"
-          name="materia"
-          class="form-select"
-          required
-        >
-          <option>Biología</option>
-          <option>Matemática</option>
-          <option>Historia</option>
-          <option>Química</option>
-        </select>
-      </div>
-
-
-      <div class="col-12">
-        <label
-          for="apunte-archivo"
-          class="form-label"
-        >
-          Archivo PDF o DOCX
-        </label>
-
-        <input
-          id="apunte-archivo"
-          name="archivo"
-          type="file"
-          class="form-control"
-          accept=".pdf,.doc,.docx"
-        >
-      </div>
-
-    </div>
-
-    <button
-      type="submit"
-      class="btn btn-primary mt-3"
-    >
-      Guardar apunte
-    </button>
-
-  </form>
+    <i class="bi bi-search"></i>
+    No encontramos apuntes para esa materia.
+  </p>
 
 </section>
 
     <hr>
 
- <section id="estadisticas">
+<section id="estadisticas">
 
   <header class="mb-4">
+
     <span class="dashboard-etiqueta">
       TU PROGRESO
     </span>
@@ -1084,124 +1296,258 @@
       Estadísticas
     </h2>
 
-    <p class="text-secondary">
+    <p class="text-secondary mb-0">
       Revisá cuánto estudiaste y cómo venís con tus objetivos.
     </p>
+
   </header>
 
 
-  <div class="row g-3 mb-4">
+  <div class="row g-4">
 
-    <div class="col-12 col-md-4">
-      <div class="estadistica-dato">
-        <span>Tiempo semanal</span>
-        <strong>3 h</strong>
-        <small>160 minutos registrados</small>
+    <!-- PANEL PRINCIPAL -->
+    <div class="col-12 col-xl-7">
+
+      <div class="estadisticas-principal">
+
+        <div class="estadisticas-principal-header">
+
+          <div>
+            <span>RESUMEN SEMANAL</span>
+            <h3>Tu ritmo de estudio</h3>
+          </div>
+
+          <div class="estadisticas-periodo">
+            Esta semana
+          </div>
+
+        </div>
+
+
+        <div class="estadisticas-tiempo">
+
+          <div>
+            <span>Tiempo total</span>
+            <strong>3 h</strong>
+            <small>160 minutos registrados</small>
+          </div>
+
+          <div class="estadisticas-circulo">
+
+            <div>
+              <strong>60%</strong>
+              <span>de tu meta</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="estadisticas-barra-general">
+          <span></span>
+        </div>
+
+
+        <div class="estadisticas-footer">
+
+          <div>
+            <i class="bi bi-bullseye"></i>
+
+            <span>
+              Meta semanal
+              <strong>5 horas</strong>
+            </span>
+          </div>
+
+          <div>
+            <i class="bi bi-fire"></i>
+
+            <span>
+              Racha actual
+              <strong>3 días</strong>
+            </span>
+          </div>
+
+          <div>
+            <i class="bi bi-stopwatch"></i>
+
+            <span>
+              Sesiones
+              <strong>3</strong>
+            </span>
+          </div>
+
+        </div>
+
       </div>
+
     </div>
 
-    <div class="col-12 col-md-4">
-      <div class="estadistica-dato">
-        <span>Materia principal</span>
-        <strong>Matemática</strong>
-        <small>75 minutos estudiados</small>
-      </div>
-    </div>
 
-    <div class="col-12 col-md-4">
-      <div class="estadistica-dato">
-        <span>Sesiones</span>
-        <strong>3</strong>
-        <small>esta semana</small>
+    <!-- METRICAS -->
+    <div class="col-12 col-xl-5">
+
+      <div class="estadisticas-metricas">
+
+        <div class="estadistica-dato estadistica-dato-destacado">
+
+          <div class="estadistica-icono">
+            <i class="bi bi-clock-history"></i>
+          </div>
+
+          <div>
+            <span>Tiempo semanal</span>
+            <strong>3 h</strong>
+            <small>160 minutos registrados</small>
+          </div>
+
+        </div>
+
+
+        <div class="estadistica-dato">
+
+          <div class="estadistica-icono estadistica-icono-verde">
+            <i class="bi bi-book"></i>
+          </div>
+
+          <div>
+            <span>Materia principal</span>
+            <strong>Matemática</strong>
+            <small>75 minutos estudiados</small>
+          </div>
+
+        </div>
+
+
+        <div class="estadistica-dato">
+
+          <div class="estadistica-icono estadistica-icono-naranja">
+            <i class="bi bi-lightning-charge"></i>
+          </div>
+
+          <div>
+            <span>Sesiones</span>
+            <strong>3</strong>
+            <small>esta semana</small>
+          </div>
+
+        </div>
+
       </div>
+
     </div>
 
   </div>
 
 
-  <div class="dashboard-card">
+  <!-- TIEMPO POR MATERIA -->
+
+  <div class="estadisticas-materias mt-4">
 
     <div class="dashboard-card-header">
-      <h3>Tiempo por materia</h3>
+
+      <div>
+        <span class="estadisticas-subtitulo">
+          DISTRIBUCIÓN
+        </span>
+
+        <h3>
+          Tiempo por materia
+        </h3>
+      </div>
+
       <span class="text-secondary small">
         Esta semana
       </span>
+
     </div>
 
-    <div class="table-responsive">
 
-      <table class="table align-middle mb-0">
+    <div class="materia-progreso">
 
-        <thead>
-          <tr>
-            <th>Materia</th>
-            <th>Tiempo estudiado</th>
-            <th>Objetivo</th>
-            <th>Progreso</th>
-          </tr>
-        </thead>
+      <div class="materia-progreso-info">
 
-        <tbody>
+        <div>
+          <span class="materia-punto materia-biologia"></span>
+          <strong>Biología</strong>
+        </div>
 
-          <tr>
-            <td>Biología</td>
-            <td>50 min</td>
-            <td>8 h</td>
-            <td>
-              <div class="progress">
-                <div
-                  class="progress-bar"
-                  style="width: 10%">
-                </div>
-              </div>
-            </td>
-          </tr>
+        <span>
+          50 min / 8 h
+        </span>
 
-          <tr>
-            <td>Matemática</td>
-            <td>75 min</td>
-            <td>7 h</td>
-            <td>
-              <div class="progress">
-                <div
-                  class="progress-bar"
-                  style="width: 18%">
-                </div>
-              </div>
-            </td>
-          </tr>
+      </div>
 
-          <tr>
-            <td>Historia</td>
-            <td>35 min</td>
-            <td>5 h</td>
-            <td>
-              <div class="progress">
-                <div
-                  class="progress-bar"
-                  style="width: 12%">
-                </div>
-              </div>
-            </td>
-          </tr>
+      <div class="materia-barra">
+        <span style="width: 10%"></span>
+      </div>
 
-          <tr>
-            <td>Química</td>
-            <td>0 min</td>
-            <td>6 h</td>
-            <td>
-              <div class="progress">
-                <div
-                  class="progress-bar"
-                  style="width: 0%">
-                </div>
-              </div>
-            </td>
-          </tr>
+    </div>
 
-        </tbody>
 
-      </table>
+    <div class="materia-progreso">
+
+      <div class="materia-progreso-info">
+
+        <div>
+          <span class="materia-punto materia-matematica"></span>
+          <strong>Matemática</strong>
+        </div>
+
+        <span>
+          75 min / 7 h
+        </span>
+
+      </div>
+
+      <div class="materia-barra">
+        <span style="width: 18%"></span>
+      </div>
+
+    </div>
+
+
+    <div class="materia-progreso">
+
+      <div class="materia-progreso-info">
+
+        <div>
+          <span class="materia-punto materia-historia"></span>
+          <strong>Historia</strong>
+        </div>
+
+        <span>
+          35 min / 5 h
+        </span>
+
+      </div>
+
+      <div class="materia-barra">
+        <span style="width: 12%"></span>
+      </div>
+
+    </div>
+
+
+    <div class="materia-progreso">
+
+      <div class="materia-progreso-info">
+
+        <div>
+          <span class="materia-punto materia-quimica"></span>
+          <strong>Química</strong>
+        </div>
+
+        <span>
+          0 min / 6 h
+        </span>
+
+      </div>
+
+      <div class="materia-barra">
+        <span style="width: 0%"></span>
+      </div>
 
     </div>
 
@@ -1212,94 +1558,193 @@
     <hr>
 
     <section id="pomodoro" class="pomodoro-section">
+
   <header class="mb-4">
-    <span class="pomodoro-etiqueta">MODO ENFOQUE</span>
-    <h2 class="mt-2 mb-2">Pomodoro</h2>
-    <p class="mb-0">
-      Elegí una materia, iniciá el temporizador y concentrate en una sola tarea.
+
+    <span class="dashboard-etiqueta">
+      MODO ENFOQUE
+    </span>
+
+    <h2 class="dashboard-seccion-titulo mb-1">
+      Pomodoro
+    </h2>
+
+    <p class="text-secondary mb-0">
+      Elegí una materia, bloqueá las distracciones y concentrate en una sola tarea.
     </p>
+
   </header>
+
 
   <div class="row g-4 align-items-stretch">
 
-    <!-- TEMPORIZADOR -->
-    <div class="col-12 col-lg-7">
-      <div class="pomodoro-panel h-100">
+    <!-- TEMPORIZADOR PRINCIPAL -->
+    <div class="col-12 col-xl-7">
 
-        <label for="pomodoro-materia" class="form-label">
-          ¿Qué vas a estudiar?
-        </label>
+      <div class="pomodoro-focus-card h-100">
 
-        <select
-          id="pomodoro-materia"
-          name="materia"
-          class="form-select"
-        >
-          <option>Biología</option>
-          <option>Matemática</option>
-          <option>Historia</option>
-          <option>Química</option>
-        </select>
+        <div class="pomodoro-focus-top">
 
-        <div class="text-center my-4">
-          <p class="pomodoro-subtitulo mb-1">
-            Sesión de enfoque
-          </p>
+          <div>
+            <span class="pomodoro-mini-label">
+              SESIÓN ACTUAL
+            </span>
 
-          <div
-            id="pomodoro-tiempo"
-            class="pomodoro-tiempo"
-            aria-live="polite"
-          >
-            25:00
+            <h3>
+              Tiempo de concentración
+            </h3>
           </div>
 
-          <p
-            id="pomodoro-estado"
-            class="pomodoro-estado mb-0"
-          >
-            Listo para comenzar
-          </p>
+          <span class="pomodoro-focus-status">
+            <i class="bi bi-circle-fill"></i>
+            Focus
+          </span>
+
         </div>
 
+
+        <div class="pomodoro-materia-box">
+
+          <label for="pomodoro-materia">
+            <i class="bi bi-book"></i>
+            ¿Qué vas a estudiar?
+          </label>
+
+          <select
+            id="pomodoro-materia"
+            name="materia"
+            class="form-select"
+          >
+            <option>Biología</option>
+            <option>Matemática</option>
+            <option>Historia</option>
+            <option>Química</option>
+          </select>
+
+        </div>
+
+
+        <div class="pomodoro-timer-wrapper">
+
+          <div class="pomodoro-timer-ring">
+
+            <div class="pomodoro-timer-inner">
+
+              <span class="pomodoro-session-label">
+                ENFOQUE
+              </span>
+
+              <div
+                id="pomodoro-tiempo"
+                class="pomodoro-tiempo"
+                aria-live="polite"
+              >
+                25:00
+              </div>
+
+              <p
+                id="pomodoro-estado"
+                class="pomodoro-estado"
+              >
+                Listo para comenzar
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
         <div class="pomodoro-controles">
+
           <button
             id="pomodoro-iniciar"
             type="button"
-            class="btn btn-light"
+            class="btn pomodoro-btn pomodoro-btn-primary"
           >
+            <i class="bi bi-play-fill"></i>
             Iniciar
           </button>
 
           <button
             id="pomodoro-pausar"
             type="button"
-            class="btn btn-outline-light"
+            class="btn pomodoro-btn pomodoro-btn-secondary"
           >
+            <i class="bi bi-pause-fill"></i>
             Pausar
           </button>
 
           <button
             id="pomodoro-reiniciar"
             type="button"
-            class="btn btn-outline-light"
+            class="btn pomodoro-btn pomodoro-btn-secondary"
           >
+            <i class="bi bi-arrow-counterclockwise"></i>
             Reiniciar
           </button>
+
+        </div>
+
+
+        <div class="pomodoro-focus-footer">
+
+          <span>
+            <i class="bi bi-stopwatch"></i>
+            25 min de enfoque
+          </span>
+
+          <span>
+            <i class="bi bi-cup-hot"></i>
+            5 min de descanso
+          </span>
+
         </div>
 
       </div>
+
     </div>
 
+
     <!-- REGISTRO MANUAL -->
-    <div class="col-12 col-lg-5">
-<form
-  id="form-sesion"
-  class="pomodoro-registro h-100">        
-  <h3 class="h5 mb-3">Registrar sesión manual</h3>
+    <div class="col-12 col-xl-5">
+
+      <form
+        id="form-sesion"
+        class="pomodoro-registro-nuevo h-100"
+      >
+
+        <div class="pomodoro-registro-header">
+
+          <div>
+            <span class="pomodoro-mini-label">
+              REGISTRO
+            </span>
+
+            <h3>
+              Guardar sesión
+            </h3>
+          </div>
+
+          <div class="pomodoro-registro-icono">
+            <i class="bi bi-journal-check"></i>
+          </div>
+
+        </div>
+
+
+        <p class="pomodoro-registro-descripcion">
+          ¿Estudiaste fuera de Studify? Registrá esa sesión manualmente.
+        </p>
+
 
         <div class="mb-3">
-          <label for="sesion-materia" class="form-label">
+
+          <label
+            for="sesion-materia"
+            class="form-label"
+          >
             Materia
           </label>
 
@@ -1313,48 +1758,98 @@
             <option>Historia</option>
             <option>Química</option>
           </select>
+
         </div>
 
-        <div class="mb-3">
-          <label for="sesion-minutos" class="form-label">
-            Minutos
-          </label>
 
-          <input
-            id="sesion-minutos"
-            name="minutos"
-            type="number"
-            min="1"
-            value="25"
-            class="form-control"
-          >
+        <div class="row g-3">
+
+          <div class="col-12 col-md-6">
+
+            <label
+              for="sesion-minutos"
+              class="form-label"
+            >
+              Minutos
+            </label>
+
+            <input
+              id="sesion-minutos"
+              name="minutos"
+              type="number"
+              min="1"
+              value="25"
+              class="form-control"
+            >
+
+          </div>
+
+
+          <div class="col-12 col-md-6">
+
+            <label
+              for="sesion-fecha"
+              class="form-label"
+            >
+              Fecha
+            </label>
+
+            <input
+              id="sesion-fecha"
+              name="fecha"
+              type="date"
+              class="form-control"
+            >
+
+          </div>
+
         </div>
 
-        <div class="mb-3">
-          <label for="sesion-fecha" class="form-label">
-            Fecha
-          </label>
 
-          <input
-            id="sesion-fecha"
-            name="fecha"
-            type="date"
-            class="form-control"
-          >
-        </div>
-
-        <button type="submit" class="btn btn-primary">
+        <button
+          type="submit"
+          class="btn pomodoro-guardar-btn w-100 mt-4"
+        >
+          <i class="bi bi-plus-circle"></i>
           Guardar sesión
         </button>
+
+
         <p
-  id="mensaje-sesion"
-  class="mt-3 mb-0 text-success fw-semibold d-none"
->
-</p>
+          id="mensaje-sesion"
+          class="pomodoro-mensaje d-none"
+        >
+        </p>
+
+
+        <div class="pomodoro-registro-info">
+
+          <div>
+            <i class="bi bi-clock-history"></i>
+
+            <span>
+              Hoy
+              <strong>25 min</strong>
+            </span>
+          </div>
+
+          <div>
+            <i class="bi bi-fire"></i>
+
+            <span>
+              Racha
+              <strong>3 días</strong>
+            </span>
+          </div>
+
+        </div>
+
       </form>
+
     </div>
 
   </div>
+
 </section>
 
     <hr>
@@ -1362,6 +1857,7 @@
 <section id="tecnicas">
 
   <header class="mb-4">
+
     <span class="dashboard-etiqueta">
       MÉTODOS DE ESTUDIO
     </span>
@@ -1371,123 +1867,248 @@
     </h2>
 
     <p class="text-secondary mb-0">
-      Elegí una técnica según el tipo de tarea que tengas que resolver.
+      Elegí una estrategia según lo que necesites aprender.
     </p>
+
   </header>
+
 
   <div class="row g-4">
 
+    <!-- POMODORO -->
     <div class="col-12 col-md-6">
-      <article class="tecnica-card tecnica-pomodoro">
 
-        <div class="tecnica-cabecera">
-          <span class="tecnica-numero">01</span>
-          <span class="tecnica-tipo">CONCENTRACIÓN</span>
+      <article class="tecnica-premium tecnica-premium-violeta">
+
+        <div class="tecnica-visual">
+
+          <span class="tecnica-numero-grande">
+            01
+          </span>
+
+          <div class="tecnica-icono-grande">
+            <i class="bi bi-stopwatch"></i>
+          </div>
+
         </div>
 
-        <h3>Pomodoro</h3>
 
-        <p class="tecnica-descripcion">
-          Trabajá en bloques cortos para mantener la concentración
-          y evitar el cansancio.
-        </p>
+        <div class="tecnica-contenido">
 
-        <div class="tecnica-dato">
-          <strong>25 min</strong>
-          <span>de estudio</span>
+          <span class="tecnica-categoria">
+            CONCENTRACIÓN
+          </span>
+
+          <h3>
+            Pomodoro
+          </h3>
+
+          <p>
+            Trabajá en bloques cortos para mantener la atención
+            y evitar el cansancio mental.
+          </p>
+
+
+          <div class="tecnica-destacado">
+
+            <strong>25 min</strong>
+            <span>de enfoque</span>
+
+          </div>
+
+
+          <div class="tecnica-footer">
+
+            <span>
+              <i class="bi bi-clock"></i>
+              + 5 min descanso
+            </span>
+
+            <a href="#pomodoro">
+              Usar técnica
+              <i class="bi bi-arrow-right"></i>
+            </a>
+
+          </div>
+
         </div>
-
-        <ol class="tecnica-pasos">
-          <li>Elegí una tarea concreta.</li>
-          <li>Estudiá durante 25 minutos.</li>
-          <li>Descansá 5 minutos.</li>
-          <li>Registrá la sesión.</li>
-        </ol>
-
-        <a href="#pomodoro" class="tecnica-link">
-          Usar Pomodoro →
-        </a>
 
       </article>
+
     </div>
 
 
+    <!-- FEYNMAN -->
     <div class="col-12 col-md-6">
-      <article class="tecnica-card tecnica-feynman">
 
-        <div class="tecnica-cabecera">
-          <span class="tecnica-numero">02</span>
-          <span class="tecnica-tipo">COMPRENSIÓN</span>
+      <article class="tecnica-premium tecnica-premium-verde">
+
+        <div class="tecnica-visual">
+
+          <span class="tecnica-numero-grande">
+            02
+          </span>
+
+          <div class="tecnica-icono-grande">
+            <i class="bi bi-chat-square-text"></i>
+          </div>
+
         </div>
 
-        <h3>Técnica Feynman</h3>
 
-        <p class="tecnica-descripcion">
-          Explicá un concepto con palabras simples para detectar
-          qué partes todavía no comprendés.
-        </p>
+        <div class="tecnica-contenido">
 
-        <div class="tecnica-dato">
-          <strong>4 pasos</strong>
-          <span>para comprender mejor</span>
+          <span class="tecnica-categoria">
+            COMPRENSIÓN
+          </span>
+
+          <h3>
+            Técnica Feynman
+          </h3>
+
+          <p>
+            Explicá un concepto con palabras simples para descubrir
+            qué partes todavía no comprendés.
+          </p>
+
+
+          <div class="tecnica-destacado">
+
+            <strong>4 pasos</strong>
+            <span>para comprender mejor</span>
+
+          </div>
+
+
+          <div class="tecnica-footer">
+
+            <span>
+              <i class="bi bi-lightbulb"></i>
+              Aprendizaje activo
+            </span>
+
+          </div>
+
         </div>
-
-        <ol class="tecnica-pasos">
-          <li>Elegí un concepto.</li>
-          <li>Explicalo como si enseñaras a otra persona.</li>
-          <li>Detectá las partes confusas.</li>
-          <li>Volvé al material y mejorá la explicación.</li>
-        </ol>
 
       </article>
+
     </div>
 
 
+    <!-- MAPAS -->
     <div class="col-12 col-md-6">
-      <article class="tecnica-card tecnica-mapas">
 
-        <div class="tecnica-cabecera">
-          <span class="tecnica-numero">03</span>
-          <span class="tecnica-tipo">ORGANIZACIÓN</span>
+      <article class="tecnica-premium tecnica-premium-naranja">
+
+        <div class="tecnica-visual">
+
+          <span class="tecnica-numero-grande">
+            03
+          </span>
+
+          <div class="tecnica-icono-grande">
+            <i class="bi bi-diagram-3"></i>
+          </div>
+
         </div>
 
-        <h3>Mapas mentales</h3>
 
-        <p class="tecnica-descripcion">
-          Organizá visualmente conceptos e ideas para entender
-          cómo se relacionan entre sí.
-        </p>
+        <div class="tecnica-contenido">
 
-        <div class="tecnica-dato">
-          <strong>Visual</strong>
-          <span>conectá conceptos</span>
+          <span class="tecnica-categoria">
+            ORGANIZACIÓN
+          </span>
+
+          <h3>
+            Mapas mentales
+          </h3>
+
+          <p>
+            Organizá conceptos visualmente para entender mejor
+            cómo se relacionan entre sí.
+          </p>
+
+
+          <div class="tecnica-destacado">
+
+            <strong>Visual</strong>
+            <span>conectá ideas</span>
+
+          </div>
+
+
+          <div class="tecnica-footer">
+
+            <span>
+              <i class="bi bi-bezier2"></i>
+              Relaciones visuales
+            </span>
+
+          </div>
+
         </div>
 
       </article>
+
     </div>
 
 
+    <!-- ACTIVE RECALL -->
     <div class="col-12 col-md-6">
-      <article class="tecnica-card tecnica-recall">
 
-        <div class="tecnica-cabecera">
-          <span class="tecnica-numero">04</span>
-          <span class="tecnica-tipo">MEMORIA</span>
+      <article class="tecnica-premium tecnica-premium-azul">
+
+        <div class="tecnica-visual">
+
+          <span class="tecnica-numero-grande">
+            04
+          </span>
+
+          <div class="tecnica-icono-grande">
+            <i class="bi bi-arrow-repeat"></i>
+          </div>
+
         </div>
 
-        <h3>Active Recall</h3>
 
-        <p class="tecnica-descripcion">
-          Intentá recordar la información sin mirar tus apuntes
-          y comprobá después qué necesitás repasar.
-        </p>
+        <div class="tecnica-contenido">
 
-        <div class="tecnica-dato">
-          <strong>Recordar</strong>
-          <span>antes de volver a leer</span>
+          <span class="tecnica-categoria">
+            MEMORIA
+          </span>
+
+          <h3>
+            Active Recall
+          </h3>
+
+          <p>
+            Intentá recordar la información sin mirar el material
+            para fortalecer la memoria.
+          </p>
+
+
+          <div class="tecnica-destacado">
+
+            <strong>Recordar</strong>
+            <span>antes de revisar</span>
+
+          </div>
+
+
+          <div class="tecnica-footer">
+
+            <span>
+              <i class="bi bi-brain"></i>
+              Memoria activa
+            </span>
+
+          </div>
+
         </div>
 
       </article>
+
     </div>
 
   </div>
@@ -1506,35 +2127,43 @@
     </span>
 
     <h2 class="dashboard-seccion-titulo mb-1">
-      Exámenes
+      Próximos exámenes
     </h2>
 
     <p class="text-secondary mb-0">
-      Organizá tus próximas evaluaciones y seguí el avance de cada materia.
+      Visualizá tus fechas importantes y organizá la preparación.
     </p>
   </header>
 
 
   <div class="row g-4">
 
-    <!-- LISTA DE EXÁMENES -->
-    <div class="col-12 col-xl-7">
+    <!-- AGENDA -->
+    <div class="col-12 col-xl-8">
 
-      <div class="examenes-lista">
+      <div class="examenes-agenda">
 
-        <div class="examen-card">
+        <!-- EXAMEN 1 -->
+        <article class="examen-timeline-card">
 
-          <div class="examen-fecha">
-            <strong>08</strong>
+          <div class="examen-fecha-bloque">
             <span>JUL</span>
+            <strong>08</strong>
+            <small>Martes</small>
           </div>
 
-          <div class="examen-contenido">
 
-            <div class="d-flex justify-content-between gap-3 align-items-start">
+          <div class="examen-linea">
+            <span></span>
+          </div>
+
+
+          <div class="examen-info">
+
+            <div class="examen-info-top">
 
               <div>
-                <span class="examen-materia">
+                <span class="examen-materia examen-biologia">
                   Biología
                 </span>
 
@@ -1543,63 +2172,73 @@
                 </h3>
               </div>
 
-              <span class="examen-badge examen-proximo">
+              <span class="examen-estado">
                 Próximo
               </span>
 
             </div>
 
 
-            <p class="examen-meta">
-              1 de 3 temas completados
+            <p>
+              Organelos, membrana celular y transporte celular.
             </p>
 
 
-            <div class="progress examen-progress">
-              <div
-                class="progress-bar"
-                style="width: 33%">
-              </div>
+            <div class="examen-progreso-top">
+              <span>Preparación</span>
+              <strong>65%</strong>
+            </div>
+
+            <div class="examen-progreso">
+              <span style="width: 65%"></span>
             </div>
 
 
-            <div class="examen-temas">
+            <div class="examen-datos">
 
-              <label>
-                <input type="checkbox" checked>
-                Membrana celular
-              </label>
+              <span>
+                <i class="bi bi-book"></i>
+                3 temas
+              </span>
 
-              <label>
-                <input type="checkbox">
-                Organelos
-              </label>
+              <span>
+                <i class="bi bi-clock"></i>
+                4 h estimadas
+              </span>
 
-              <label>
-                <input type="checkbox">
-                Transporte celular
-              </label>
+              <span>
+                <i class="bi bi-check2-circle"></i>
+                2 completados
+              </span>
 
             </div>
 
           </div>
 
-        </div>
+        </article>
 
 
-        <div class="examen-card">
+        <!-- EXAMEN 2 -->
+        <article class="examen-timeline-card">
 
-          <div class="examen-fecha examen-fecha-secundaria">
-            <strong>15</strong>
+          <div class="examen-fecha-bloque examen-fecha-secundaria">
             <span>JUL</span>
+            <strong>15</strong>
+            <small>Martes</small>
           </div>
 
-          <div class="examen-contenido">
 
-            <div class="d-flex justify-content-between gap-3 align-items-start">
+          <div class="examen-linea">
+            <span></span>
+          </div>
+
+
+          <div class="examen-info">
+
+            <div class="examen-info-top">
 
               <div>
-                <span class="examen-materia">
+                <span class="examen-materia examen-matematica">
                   Matemática
                 </span>
 
@@ -1608,171 +2247,118 @@
                 </h3>
               </div>
 
-              <span class="examen-badge">
+              <span class="examen-estado examen-estado-pendiente">
                 Pendiente
               </span>
 
             </div>
 
 
-            <p class="examen-meta">
-              0 de 3 temas completados
+            <p>
+              Integrales definidas, áreas y ejercicios de aplicación.
             </p>
 
 
-            <div class="progress examen-progress">
-              <div
-                class="progress-bar"
-                style="width: 0%">
-              </div>
+            <div class="examen-progreso-top">
+              <span>Preparación</span>
+              <strong>25%</strong>
+            </div>
+
+            <div class="examen-progreso">
+              <span style="width: 25%"></span>
             </div>
 
 
-            <div class="examen-pendiente">
-              Empezá a marcar los temas a medida que avances.
+            <div class="examen-datos">
+
+              <span>
+                <i class="bi bi-book"></i>
+                4 temas
+              </span>
+
+              <span>
+                <i class="bi bi-clock"></i>
+                6 h estimadas
+              </span>
+
+              <span>
+                <i class="bi bi-check2-circle"></i>
+                1 completado
+              </span>
+
             </div>
 
           </div>
 
-        </div>
+        </article>
 
       </div>
 
     </div>
 
 
-    <!-- NUEVO EXAMEN -->
-    <div class="col-12 col-xl-5">
+    <!-- PANEL LATERAL -->
+    <div class="col-12 col-xl-4">
 
-      <form class="nuevo-examen-card">
+      <aside class="examen-resumen-card">
 
-        <div class="nuevo-examen-header">
+        <div class="examen-resumen-icono">
+          <i class="bi bi-calendar2-week"></i>
+        </div>
 
-          <div>
-            <span class="dashboard-etiqueta">
-              PLANIFICACIÓN
-            </span>
+        <span class="examen-resumen-label">
+          PRÓXIMO EXAMEN
+        </span>
 
-            <h3>
-              Nuevo examen
-            </h3>
-          </div>
+        <h3>
+          Biología Celular
+        </h3>
 
-          <span class="nuevo-examen-icono">
-            +
+        <p>
+          Te quedan pocos días para completar la preparación.
+        </p>
+
+
+        <div class="examen-cuenta">
+
+          <strong>08</strong>
+
+          <span>
+            JUL
+            <small>Próxima evaluación</small>
           </span>
 
         </div>
 
 
-        <div class="mb-3">
-          <label
-            for="examen-nombre"
-            class="form-label"
-          >
-            Nombre del examen
-          </label>
+        <div class="examen-resumen-divider"></div>
 
-          <input
-            id="examen-nombre"
-            name="nombre"
-            type="text"
-            class="form-control"
-            placeholder="Ej: Parcial de Química"
-            required
-          >
+
+        <div class="examen-resumen-item">
+          <span>Progreso</span>
+          <strong>65%</strong>
+        </div>
+
+        <div class="examen-resumen-item">
+          <span>Temas pendientes</span>
+          <strong>1</strong>
+        </div>
+
+        <div class="examen-resumen-item">
+          <span>Tiempo recomendado</span>
+          <strong>2 h</strong>
         </div>
 
 
-        <div class="mb-3">
-          <label
-            for="examen-materia"
-            class="form-label"
-          >
-            Materia
-          </label>
-
-          <select
-            id="examen-materia"
-            name="materia"
-            class="form-select"
-          >
-            <option>Biología</option>
-            <option>Matemática</option>
-            <option>Historia</option>
-            <option>Química</option>
-          </select>
-        </div>
-
-
-        <div class="row g-3">
-
-          <div class="col-12 col-md-6">
-            <label
-              for="examen-fecha"
-              class="form-label"
-            >
-              Fecha
-            </label>
-
-            <input
-              id="examen-fecha"
-              name="fecha"
-              type="date"
-              class="form-control"
-              required
-            >
-          </div>
-
-
-          <div class="col-12 col-md-6">
-            <label
-              for="examen-horas"
-              class="form-label"
-            >
-              Horas estimadas
-            </label>
-
-            <input
-              id="examen-horas"
-              name="horas"
-              type="number"
-              min="1"
-              class="form-control"
-              placeholder="6"
-            >
-          </div>
-
-        </div>
-
-
-        <div class="mt-3">
-          <label
-            for="examen-temas"
-            class="form-label"
-          >
-            Temas
-          </label>
-
-          <textarea
-            id="examen-temas"
-            name="temas"
-            rows="4"
-            class="form-control"
-            placeholder="Separá los temas por coma"
-            required
-          ></textarea>
-        </div>
-
-
-        <button
-          type="submit"
-          class="btn btn-primary w-100 mt-4"
+        <a
+          href="#plan"
+          class="btn examen-plan-btn"
         >
-          Guardar examen
-        </button>
+          <i class="bi bi-arrow-right-circle"></i>
+          Ver plan de estudio
+        </a>
 
-      </form>
+      </aside>
 
     </div>
 
