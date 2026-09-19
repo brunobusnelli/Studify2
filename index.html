@@ -465,107 +465,338 @@
 
     <hr>
 
-    <section id="apuntes">
-      <header>
-        <h2>Mis apuntes</h2>
-        <p>Carga materiales y organízalos por materia.</p>
-      </header>
+<section id="apuntes">
 
-      <form>
-        <label for="filtro-materia">Filtrar por materia</label>
+  <header class="mb-4">
+    <span class="dashboard-etiqueta">
+      MIS MATERIALES
+    </span>
+
+    <h2 class="dashboard-seccion-titulo mb-1">
+      Mis apuntes
+    </h2>
+
+    <p class="text-secondary mb-0">
+      Organizá tus materiales y encontralos rápido por materia.
+    </p>
+  </header>
+
+
+  <div class="row g-3 align-items-end mb-4">
+
+    <div class="col-12 col-md-5">
+
+      <label
+        for="filtro-materia"
+        class="form-label"
+      >
+        Filtrar por materia
+      </label>
+
+      <select
+        id="filtro-materia"
+        name="materia"
+        class="form-select"
+      >
+        <option value="todos">Todos</option>
+        <option value="biologia">Biología</option>
+        <option value="matematica">Matemática</option>
+        <option value="historia">Historia</option>
+        <option value="quimica">Química</option>
+      </select>
+
+    </div>
+
+
+    <div class="col-12 col-md-7 text-md-end">
+
+      <p
+        id="contador-apuntes"
+        class="text-secondary small mb-0"
+      >
+        3 apuntes encontrados
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <section aria-labelledby="lista-apuntes-title">
+
+    <h3
+      id="lista-apuntes-title"
+      class="visually-hidden"
+    >
+      Apuntes guardados
+    </h3>
+
+
+    <div class="row g-4">
+
+      <div class="col-12 col-md-6 col-xl-4">
+
+        <article
+          class="apunte-card apunte-card-nueva"
+          data-materia="biologia"
+        >
+
+          <div class="apunte-card-superior">
+
+            <span class="archivo-icono">
+              PDF
+            </span>
+
+            <span class="apunte-materia">
+              Biología
+            </span>
+
+          </div>
+
+          <h4>
+            Fisiología Humana - Unidad 2
+          </h4>
+
+          <p class="apunte-meta">
+            PDF · 2.4 MB
+          </p>
+
+          <div class="apunte-acciones">
+
+            <button
+              type="button"
+              class="btn btn-primary btn-sm"
+            >
+              Abrir
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary btn-sm"
+            >
+              Editar
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-danger btn-sm"
+            >
+              Eliminar
+            </button>
+
+          </div>
+
+        </article>
+
+      </div>
+
+
+      <div class="col-12 col-md-6 col-xl-4">
+
+        <article
+          class="apunte-card apunte-card-nueva"
+          data-materia="matematica"
+        >
+
+          <div class="apunte-card-superior">
+
+            <span class="archivo-icono">
+              PDF
+            </span>
+
+            <span class="apunte-materia">
+              Matemática
+            </span>
+
+          </div>
+
+          <h4>
+            Cálculo Integral - Resumen
+          </h4>
+
+          <p class="apunte-meta">
+            PDF · 1.8 MB
+          </p>
+
+          <div class="apunte-acciones">
+
+            <button
+              type="button"
+              class="btn btn-primary btn-sm"
+            >
+              Abrir
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary btn-sm"
+            >
+              Editar
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-danger btn-sm"
+            >
+              Eliminar
+            </button>
+
+          </div>
+
+        </article>
+
+      </div>
+
+
+      <div class="col-12 col-md-6 col-xl-4">
+
+        <article
+          class="apunte-card apunte-card-nueva"
+          data-materia="historia"
+        >
+
+          <div class="apunte-card-superior">
+
+            <span class="archivo-icono">
+              PDF
+            </span>
+
+            <span class="apunte-materia">
+              Historia
+            </span>
+
+          </div>
+
+          <h4>
+            Historia Argentina - Siglo XIX
+          </h4>
+
+          <p class="apunte-meta">
+            PDF · 3.1 MB
+          </p>
+
+          <div class="apunte-acciones">
+
+            <button
+              type="button"
+              class="btn btn-primary btn-sm"
+            >
+              Abrir
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary btn-sm"
+            >
+              Editar
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-danger btn-sm"
+            >
+              Eliminar
+            </button>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+
+
+    <p
+      id="sin-resultados"
+      class="text-secondary text-center py-4 d-none"
+    >
+      No hay apuntes guardados para esta materia.
+    </p>
+
+  </section>
+
+
+  <form
+    enctype="multipart/form-data"
+    class="dashboard-card mt-4"
+  >
+
+    <h3 class="h5 mb-3">
+      Nuevo apunte
+    </h3>
+
+    <div class="row g-3">
+
+      <div class="col-12 col-md-6">
+        <label
+          for="apunte-titulo"
+          class="form-label"
+        >
+          Título
+        </label>
+
+        <input
+          id="apunte-titulo"
+          name="titulo"
+          type="text"
+          class="form-control"
+          required
+        >
+      </div>
+
+
+      <div class="col-12 col-md-6">
+        <label
+          for="apunte-materia"
+          class="form-label"
+        >
+          Materia
+        </label>
+
         <select
-  id="filtro-materia"
-  name="materia"
-  class="form-select"
->
-  <option value="todos">Todos</option>
-  <option value="biologia">Biología</option>
-  <option value="matematica">Matemática</option>
-  <option value="historia">Historia</option>
-  <option value="quimica">Química</option>
-</select>
-      </form>
+          id="apunte-materia"
+          name="materia"
+          class="form-select"
+          required
+        >
+          <option>Biología</option>
+          <option>Matemática</option>
+          <option>Historia</option>
+          <option>Química</option>
+        </select>
+      </div>
 
-<section aria-labelledby="lista-apuntes-title">
 
-  <h3 id="lista-apuntes-title">
-    Apuntes guardados
-  </h3>
+      <div class="col-12">
+        <label
+          for="apunte-archivo"
+          class="form-label"
+        >
+          Archivo PDF o DOCX
+        </label>
 
-  <p
-    id="contador-apuntes"
-    class="text-secondary small"
-  >
-    3 apuntes encontrados
-  </p>
+        <input
+          id="apunte-archivo"
+          name="archivo"
+          type="file"
+          class="form-control"
+          accept=".pdf,.doc,.docx"
+        >
+      </div>
 
-  <article
-    class="apunte-card"
-    data-materia="biologia"
-  >
-    <h4>Fisiología Humana - Unidad 2</h4>
-    <p>Biología · PDF · 2.4 MB</p>
+    </div>
 
-    <button type="button">Abrir</button>
-    <button type="button">Editar</button>
-    <button type="button">Eliminar</button>
-  </article>
+    <button
+      type="submit"
+      class="btn btn-primary mt-3"
+    >
+      Guardar apunte
+    </button>
 
-  <article
-    class="apunte-card"
-    data-materia="matematica"
-  >
-    <h4>Cálculo Integral - Resumen</h4>
-    <p>Matemática · PDF · 1.8 MB</p>
-
-    <button type="button">Abrir</button>
-    <button type="button">Editar</button>
-    <button type="button">Eliminar</button>
-  </article>
-
-  <article
-    class="apunte-card"
-    data-materia="historia"
-  >
-    <h4>Historia Argentina - Siglo XIX</h4>
-    <p>Historia · PDF · 3.1 MB</p>
-
-    <button type="button">Abrir</button>
-    <button type="button">Editar</button>
-    <button type="button">Eliminar</button>
-  </article>
-
-  <p
-    id="sin-resultados"
-    class="text-secondary d-none"
-  >
-    No hay apuntes guardados para esta materia.
-  </p>
+  </form>
 
 </section>
-
-      <form enctype="multipart/form-data">
-        <fieldset>
-          <legend>Nuevo apunte</legend>
-
-          <label for="apunte-titulo">Título</label>
-          <input id="apunte-titulo" name="titulo" type="text" required>
-
-          <label for="apunte-materia">Materia</label>
-          <select id="apunte-materia" name="materia" required>
-            <option>Biología</option>
-            <option>Matemática</option>
-            <option>Historia</option>
-            <option>Química</option>
-          </select>
-
-          <label for="apunte-archivo">Archivo PDF o DOCX</label>
-          <input id="apunte-archivo" name="archivo" type="file" accept=".pdf,.doc,.docx">
-
-          <button type="submit">Guardar apunte</button>
-        </fieldset>
-      </form>
-    </section>
 
     <hr>
 

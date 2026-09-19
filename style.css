@@ -1200,3 +1200,73 @@ body > header .nav-link.active {
     background-color: #e5f2ff;
     color: #267bc6;
 }
+
+/* ========================================
+   MIS APUNTES
+   ======================================== */
+
+.apunte-card-nueva {
+    height: 100%;
+    margin: 0;
+    padding: 1.4rem;
+
+    border: 1px solid #e9ebf3;
+    border-radius: 18px;
+
+    background-color: #ffffff;
+
+    box-shadow:
+        0 6px 20px rgba(31, 41, 55, 0.05);
+}
+
+.apunte-card-superior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    margin-bottom: 1rem;
+}
+
+.apunte-materia {
+    padding: 0.3rem 0.65rem;
+
+    border-radius: 999px;
+
+    background-color: #f1f0ff;
+    color: #5b5be7;
+
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.apunte-card-nueva h4 {
+    min-height: 48px;
+
+    margin-bottom: 0.4rem;
+
+    color: #171a2c;
+
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.apunte-meta {
+    margin-bottom: 1.2rem;
+
+    color: #8a90a2;
+
+    font-size: 0.82rem;
+}
+
+.apunte-acciones {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 0.5rem;
+}
+
+.apunte-acciones .btn {
+    width: auto;
+}
