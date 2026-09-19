@@ -1027,3 +1027,176 @@ body > header .nav-link.active {
             #7957e8
         );
 }
+
+/* ========================================
+   TECNICAS DE ESTUDIO
+   ======================================== */
+
+.tecnica-card {
+    position: relative;
+
+    height: 100%;
+    margin: 0;
+    padding: 1.5rem;
+
+    border: 1px solid #e9ebf3;
+    border-radius: 18px;
+
+    background-color: #ffffff;
+
+    box-shadow:
+        0 6px 20px rgba(31, 41, 55, 0.05);
+
+    overflow: hidden;
+}
+
+.tecnica-card::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background-color: #5b5be7;
+}
+
+.tecnica-cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    margin-bottom: 1.2rem;
+}
+
+.tecnica-numero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 12px;
+
+    background-color: #f0efff;
+    color: #5b5be7;
+
+    font-weight: 700;
+}
+
+.tecnica-tipo {
+    color: #9297a8;
+
+    font-size: 0.68rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08rem;
+}
+
+.tecnica-card h3 {
+    margin-bottom: 0.6rem;
+
+    color: #171a2c;
+
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.tecnica-descripcion {
+    min-height: 48px;
+
+    color: #687086;
+
+    line-height: 1.6;
+}
+
+.tecnica-dato {
+    display: flex;
+    align-items: baseline;
+
+    gap: 0.45rem;
+
+    margin: 1.2rem 0;
+    padding: 0.9rem 1rem;
+
+    border-radius: 12px;
+
+    background-color: #f7f7fc;
+}
+
+.tecnica-dato strong {
+    color: #5b5be7;
+
+    font-size: 1.1rem;
+}
+
+.tecnica-dato span {
+    color: #8a90a2;
+
+    font-size: 0.82rem;
+}
+
+.tecnica-pasos {
+    margin: 0 0 1.2rem;
+    padding-left: 1.2rem;
+
+    color: #555d75;
+}
+
+.tecnica-pasos li {
+    margin-bottom: 0.45rem;
+}
+
+.tecnica-link {
+    padding: 0 !important;
+
+    background: transparent !important;
+    color: #5b5be7 !important;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    box-shadow: none;
+}
+
+.tecnica-link:hover {
+    background: transparent !important;
+    color: #4438ca !important;
+
+    transform: none !important;
+}
+
+
+/* Variaciones sutiles */
+
+.tecnica-feynman::before {
+    background-color: #27a875;
+}
+
+.tecnica-feynman .tecnica-numero {
+    background-color: #e4f7ef;
+    color: #21885f;
+}
+
+.tecnica-mapas::before {
+    background-color: #e89520;
+}
+
+.tecnica-mapas .tecnica-numero {
+    background-color: #fff2dd;
+    color: #d68216;
+}
+
+.tecnica-recall::before {
+    background-color: #2685dd;
+}
+
+.tecnica-recall .tecnica-numero {
+    background-color: #e5f2ff;
+    color: #267bc6;
+}
